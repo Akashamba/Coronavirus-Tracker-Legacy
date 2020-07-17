@@ -1,11 +1,21 @@
 nav {
-	background-color: #00FF00;
+	background-color: #54E254;
 	box-sizing: border-box;
 	width: 100vw;
 }
 
 nav ul{
 	margin-right: 20px;
+}
+
+header{
+	position: sticky;	
+	top: 0;
+	z-index: 10;
+}
+
+th{
+	background-color: #54E254;
 }
 
 th, td{
@@ -42,6 +52,22 @@ div{
 	font-size: 40px;
 }
 
+.table{
+	border-top: 1px solid black;
+}
+
+#table-header{
+	text-align: left;
+	padding: 2px;
+	background-color: #54E254;
+	font-size: 32px;
+}
+
+.container{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
 @media screen and (min-width: 992px){
 	#summary{
 		transition-duration: 0.8s;
@@ -51,7 +77,7 @@ div{
 	}
 
 	#summary:hover{
-		background-color: #FF0000;	
+		background-color: #54E254;	
 		color: #FFFFFF;
 	}
 
