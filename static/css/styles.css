@@ -1,0 +1,61 @@
+nav {
+	background-color: #00FF00;
+	box-sizing: border-box;
+	width: 100vw;
+}
+
+nav ul{
+	margin-right: 20px;
+}
+
+th, td{
+	text-align: center;
+} 
+
+
+table{
+	border-collapse: collapse;
+}
+
+table, th, td {
+	padding: 5px;
+	border: 1px solid black;
+}
+
+div{
+	text-align: center;
+}
+
+#summary{
+	background-color: #EBEBED;
+	border-radius: 10px;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+	margin: 10px;
+	display: inline-block;
+
+	font-size: 35px;
+	width: 30vw;
+	height: 6vh;
+}
+
+#summary span{
+	font-size: 40px;
+}
+
+@media screen and (min-width: 992px){
+	#summary{
+		transition-duration: 0.8s;
+		width: 18vw;
+		height: 8vh;
+		font-size: 16px;
+	}
+
+	#summary:hover{
+		background-color: #FF0000;	
+		color: #FFFFFF;
+	}
+
+	#summary span{
+		font-size: 20px;
+	}	
+}
