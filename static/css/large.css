@@ -1,0 +1,31 @@
+/* Styling for large devices */
+@media screen and (min-width: 992px){
+	/* Styling nav*/
+	nav{
+		height: 7vw;
+	}
+
+	nav .nav-item:hover{
+		background-color: #EBEBED;
+	}
+	/**/
+
+	/*Styling summary tabs*/
+	#summary{
+		transition-duration: 0.8s;
+		width: 18vw;
+		height: 8vh;
+		font-size: 16px;
+	}
+
+	#summary:hover{
+		background-color: #37f337;	
+		color: #FFFFFF;
+	}
+
+	#summary span{
+		font-size: 20px;
+	}	
+	/**/
+}
+/**/

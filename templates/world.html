@@ -2,15 +2,16 @@
 <html>
 <head>
 	<meta charset="utf-8">	
-	<meta name="viewport" content="width=device-width">
+	<!-- <meta name="viewport" content="width=device-width"> -->
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-	<link rel="stylesheet" type="text/css" href="../static/css/styles.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/large.css') }}">
 	
 	<link rel="shortcut icon" href="{{ url_for('static', filename='images/virus.ico') }}" type="image/x-icon">
 
-	<script src="https://kit.fontawesome.com/ccec0b4920.js" crossorigin="anonymous"></script>
+	<!-- <script src="https://kit.fontawesome.com/ccec0b4920.js" crossorigin="anonymous"></script> -->
 
 	<title>Covid-19 Tracker</title>
 </head>
@@ -18,7 +19,7 @@
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light">
 			
-			<a class="navbar-brand" href="{{ url_for('home') }}">Coronavirus Tracker</a>
+			<a class="navbar-brand" href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/logo.png') }}" id="logo"></a>
 
 			<button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
 				<span class="navbar-toggler-icon"></span>
@@ -36,9 +37,8 @@
 		</nav>
 	</header>
 
-	<h2>India </h2>
-
 	<div class="container">
+		<h2>Global Statistics</h2>
 		<div class="row">
 			<div class="col-md-12">
 			{% for key, value in result[0].items() %}
@@ -52,8 +52,9 @@
 
 	<div class="container">
 		<table class="table table-striped table-hover">
-			<tr><th>Position</th><th>State</th><th>Confirmed</th><th>Active</th><th>Recovered</th><th>Deaths</th></tr>
-			{% for i in range(1,39) %}
+			<tr><th colspan="6" id="table-header">Statewise</th></tr>
+			<tr><th>Position</th><th>State</th><th>Confirmed</th><th>Recovered</th><th>Deaths</th><th>Date</th></tr>
+			{% for i in range(1,result|length) %}
 				<tr>
 					{% for key, value in result[i].items() %}
 				        <td> {{ value }} </td>

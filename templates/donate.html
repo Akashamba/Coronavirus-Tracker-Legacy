@@ -2,15 +2,19 @@
 <html>
 <head>
 	<meta charset="utf-8">	
-	<meta name="viewport" content="width=device-width">
+	<!-- <meta name="viewport" content="width=device-width"> -->
 	
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+	
 	<link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/large.css">
+
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	
 	<link rel="shortcut icon" href="{{ url_for('static', filename='images/virus.ico') }}" type="image/x-icon">
 
-	<script src="https://kit.fontawesome.com/ccec0b4920.js" crossorigin="anonymous"></script>
+	<!-- <script src="https://kit.fontawesome.com/ccec0b4920.js" crossorigin="anonymous"></script> -->
 
 	<title>Covid-19 Tracker</title>
 </head>
@@ -36,8 +40,6 @@
 		</nav>
 	</header>
 
-	<h2>India </h2>
-
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -52,6 +54,7 @@
 
 	<div class="container">
 		<table class="table table-striped table-hover">
+			<tr><th colspan="6" id="table-header">Statewise</th></tr>
 			<tr><th>Position</th><th>State</th><th>Confirmed</th><th>Active</th><th>Recovered</th><th>Deaths</th></tr>
 			{% for i in range(1,39) %}
 				<tr>

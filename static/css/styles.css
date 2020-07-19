@@ -1,11 +1,23 @@
+/* Styling for nav and header */
 nav {
-	background-color: #54E254;
-	box-sizing: border-box;
-	width: 100vw;
+	background-color: #37f337;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+	/* width: device-width; */
 }
 
-nav ul{
-	margin-right: 20px;
+#logo {
+	width: 20vw;
+}
+
+nav .nav-item{
+	margin: 5px;
+	width: 100px;
+	border-radius: 20px;
+	text-align: center;
+}
+
+nav .active{
+	background-color: #FFFFFF;
 }
 
 header{
@@ -13,30 +25,37 @@ header{
 	top: 0;
 	z-index: 10;
 }
+/**/
 
-th{
-	background-color: #54E254;
+/* Styling Tables */
+table{
+	border-collapse: collapse;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 
 th, td{
 	text-align: center;
-} 
-
-
-table{
-	border-collapse: collapse;
-}
-
-table, th, td {
 	padding: 5px;
-	border: 1px solid black;
 }
 
-div{
-	text-align: center;
+td:nth-of-type(2) {
+	font-weight: bold;
+  }
+
+th{
+	background-color: #37f337;
 }
 
+#table-header{
+	font-size: 32px;
+	font-weight: normal;
+	text-align: left;
+}
+/**/
+
+/* Styling summary tabs */
 #summary{
+	text-align: center;
 	background-color: #EBEBED;
 	border-radius: 10px;
 	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
@@ -51,37 +70,8 @@ div{
 #summary span{
 	font-size: 40px;
 }
+/**/
 
-.table{
-	border-top: 1px solid black;
-}
-
-#table-header{
-	text-align: left;
-	padding: 2px;
-	background-color: #54E254;
-	font-size: 32px;
-}
-
-.container{
-	padding-left: 0px;
-	padding-right: 0px;
-}
-
-@media screen and (min-width: 992px){
-	#summary{
-		transition-duration: 0.8s;
-		width: 18vw;
-		height: 8vh;
-		font-size: 16px;
-	}
-
-	#summary:hover{
-		background-color: #54E254;	
-		color: #FFFFFF;
-	}
-
-	#summary span{
-		font-size: 20px;
-	}	
+.col-md-12{
+	text-align: center;
 }
