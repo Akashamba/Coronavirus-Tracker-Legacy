@@ -2,7 +2,16 @@
 @media screen and (min-width: 992px){
 	/* Styling nav*/
 	nav{
-		height: 7vw;
+		height: 8vw;
+	}
+
+	.navbar-toggler-icon {
+		height: 1.5rem;
+		width: 1.5rem;
+	}
+
+	#logo {
+		width: 20vw;
 	}
 
 	nav .nav-item:hover{

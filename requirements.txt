@@ -11,7 +11,7 @@ nltk==3.4.5
 passlib==1.7.2
 PySimpleGUI==4.16.0
 pyTelegramBotAPI==3.6.7
-requests==2.7.0
+requests>=2.20.0
 six==1.14.0
 telebot==0.0.3
 telegram==0.0.1

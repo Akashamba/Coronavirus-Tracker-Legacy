@@ -2,11 +2,17 @@
 nav {
 	background-color: #37f337;
 	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+	height: 10vh;
 	/* width: device-width; */
 }
 
+.navbar-toggler-icon {
+	height: 3rem;
+	width: 3rem;
+}
+
 #logo {
-	width: 20vw;
+	width: 35vw;
 }
 
 nav .nav-item{

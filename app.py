@@ -3,6 +3,12 @@ import requests
 import json
 
 
+def comma(n):
+    s, *d = str(n).partition(".")
+    r = ",".join([s[x-2:x] for x in range(-3, -len(s), -2)][::-1] + [s[-3:]])
+    return "".join([r] + d)
+
+
 def get_url(url):
     response = requests.get(url)
     content = response.content.decode("utf8")
@@ -12,26 +18,27 @@ def get_url(url):
 def get_india_data():
     total = json.loads(get_url("https://api.covidindiatracker.com/total.json"))
     state = json.loads(get_url("https://api.covidindiatracker.com/state_data.json"))
-    india_data = [{"Confirmed": total["confirmed"], "Active": total["active"],
-                   "Recovered":total["recovered"], "Deaths": total["deaths"]}]
+    india_data = [{"Confirmed": comma(total["confirmed"]), "Active": comma(total["active"]),
+                   "Recovered":comma(total["recovered"]), "Deaths": comma(total["deaths"])}]
     for i in range(len(state)):
-        india_data.append({"id": i + 1, "State": state[i]["state"], "Confirmed": state[i]["confirmed"],
-                           "Active": state[i]["active"], "Recovered": state[i]["recovered"], "Deaths": state[i]["deaths"]})
+        india_data.append({"id": i + 1, "State": state[i]["state"], "Confirmed": comma(state[i]["confirmed"]),
+                           "Active": comma(state[i]["active"]), "Recovered": comma(state[i]["recovered"]),
+                           "Deaths": comma(state[i]["deaths"])})
     return india_data
 
 
 def get_world_data():
     total = json.loads(get_url("https://api.covid19api.com/summary"))
 
-    world_data = [{"Confirmed": total["Global"]["TotalConfirmed"], "Recovered":total["Global"]["TotalRecovered"],
-                   "Deaths": total["Global"]["TotalDeaths"]}]
+    world_data = [{"Confirmed": comma(total["Global"]["TotalConfirmed"]),
+                   "Recovered": comma(total["Global"]["TotalRecovered"]),
+                   "Deaths": comma(total["Global"]["TotalDeaths"])}]
 
     for i in range(len(total["Countries"])):
         world_data.append({"id": i + 1, "Country": total["Countries"][i]["Country"],
-                           "Confirmed": total["Countries"][i]["TotalConfirmed"],
-                           "Recovered": total["Countries"][i]["TotalRecovered"],
-                           "Deaths": total["Countries"][i]["TotalDeaths"],
-                           "Date Recorded": total["Countries"][i]["Date"]})
+                           "Confirmed": comma(total["Countries"][i]["TotalConfirmed"]),
+                           "Recovered": comma(total["Countries"][i]["TotalRecovered"]),
+                           "Deaths": comma(total["Countries"][i]["TotalDeaths"])})
     return world_data
 
 
@@ -55,7 +62,7 @@ def world():
 
 @app.route('/donate')
 def donate():
-    return render_template('donate.html', result=get_data_india())
+    return render_template('donate.html', result=get_india_data())
 
 
 if __name__ == "__main__":
