@@ -10,6 +10,29 @@
 		width: 1.5rem;
 	}
 
+	nav .navbar-nav{
+		display: flex;
+	}
+
+	#menu {
+		display: none;
+	}
+
+	nav .nav-item{
+		margin: 5px;
+		width: 100px;
+		border-radius: 20px;
+		text-align: center;
+	}
+
+	nav .nav-link {
+		font-size: 1rem;
+	}
+
+	nav .nav-item {
+		padding: 0px;
+	}
+
 	#logo {
 		width: 20vw;
 	}
@@ -28,8 +51,7 @@
 	}
 
 	#summary:hover{
-		background-color: #37f337;	
-		color: #FFFFFF;
+		background-color: #00FF00;	
 	}
 
 	#summary span{

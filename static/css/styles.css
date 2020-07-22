@@ -1,25 +1,52 @@
 /* Styling for nav and header */
 nav {
-	background-color: #37f337;
+	background-color: #00FF00;
 	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 	height: 10vh;
-	/* width: device-width; */
 }
 
 .navbar-toggler-icon {
-	height: 3rem;
-	width: 3rem;
+	height: 4rem;
+	width: 4rem;
+}
+
+.navbar-toggler {
+	margin-right: 20px;
+}
+
+nav .navbar-nav{
+	display: none;
+}
+
+header div {
+	z-index: 10; /*not working */
+	background-color: #EBEBED;
+	width: 40vw;
+	float: right;
+	text-align: right;
+	border-radius: 0 0 10px 10px;
+}
+
+header .nav-item {
+	display: inline;
+	padding-right: 30px;
+}
+
+header .nav-link {
+	font-size: 40px;
+	color: #000000;
+}
+
+header .active{
+	background-color: #00FF00;
+}
+
+div {
+	clear: both;
 }
 
 #logo {
 	width: 35vw;
-}
-
-nav .nav-item{
-	margin: 5px;
-	width: 100px;
-	border-radius: 20px;
-	text-align: center;
 }
 
 nav .active{
@@ -37,6 +64,8 @@ header{
 table{
 	border-collapse: collapse;
 	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+	margin-left: -13px;
+	margin-right: -13px;
 }
 
 th, td{
@@ -49,7 +78,7 @@ td:nth-of-type(2) {
   }
 
 th{
-	background-color: #37f337;
+	background-color: #00FF00;
 }
 
 #table-header{
@@ -77,6 +106,29 @@ th{
 	font-size: 40px;
 }
 /**/
+
+/* Styling Donate Link */
+#donate-link{
+	text-decoration: none;
+}
+
+#donate-container {
+	margin: 0;
+  	position: absolute;
+  	top: 50%;
+}
+
+#donate-div{
+	color: #000000;
+	background-color: #00FF00;
+	width: 60vw;
+	border-radius: 20px;
+	font-size: 50px;
+	height: 70px;
+	line-height: 50px;
+	text-align: center;
+	margin: 0 auto;
+}
 
 .col-md-12{
 	text-align: center;
