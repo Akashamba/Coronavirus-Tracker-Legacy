@@ -1,6 +1,10 @@
+body{
+	--main-bg-color: #00FF00;
+}
+
 /* Styling for nav and header */
 nav {
-	background-color: #00FF00;
+	background-color: var(--main-bg-color);
 	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 	height: 10vh;
 }
@@ -19,12 +23,15 @@ nav .navbar-nav{
 }
 
 header div {
-	z-index: 10; /*not working */
 	background-color: #EBEBED;
 	width: 40vw;
 	float: right;
 	text-align: right;
 	border-radius: 0 0 10px 10px;
+}
+
+#menu{
+	box-shadow: 0 .5rem 1rem .5rem rgba(0,0,0,.2);
 }
 
 header .nav-item {
@@ -38,7 +45,7 @@ header .nav-link {
 }
 
 header .active{
-	background-color: #00FF00;
+	background-color: var(--main-bg-color);
 }
 
 div {
@@ -46,7 +53,7 @@ div {
 }
 
 #logo {
-	width: 35vw;
+	width: 40vw;
 }
 
 nav .active{
@@ -61,16 +68,20 @@ header{
 /**/
 
 /* Styling Tables */
-table{
+.table{
 	border-collapse: collapse;
 	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-	margin-left: -13px;
-	margin-right: -13px;
+
+	margin-left: -85px;
+	width: 125%;
+	font-size: 40px;
+	/* margin-right: 40px;  */
 }
 
-th, td{
+.table th, .table td{
 	text-align: center;
-	padding: 5px;
+	
+	padding: 40px;
 }
 
 td:nth-of-type(2) {
@@ -78,12 +89,11 @@ td:nth-of-type(2) {
   }
 
 th{
-	background-color: #00FF00;
+	background-color: var(--main-bg-color);
 }
 
 #table-header{
-	font-size: 32px;
-	font-weight: normal;
+	font-size: 45px;
 	text-align: left;
 }
 /**/
@@ -120,7 +130,7 @@ th{
 
 #donate-div{
 	color: #000000;
-	background-color: #00FF00;
+	background-color: var(--main-bg-color);
 	width: 60vw;
 	border-radius: 20px;
 	font-size: 50px;

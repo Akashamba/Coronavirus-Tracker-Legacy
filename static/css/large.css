@@ -58,5 +58,21 @@
 		font-size: 20px;
 	}	
 	/**/
+
+	/* Styling tables */
+	.table{
+		font-size: 16px;
+		width: 100%;
+		margin-left: -13px;  
+		margin-right: -13px;
+	}
+
+	.table th, .table td{
+		padding: 12px;
+	}
+
+	#table-header{
+		font-size: 32px;
+	}
 }
 /**/
