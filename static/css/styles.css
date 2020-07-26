@@ -2,6 +2,12 @@ body{
 	--main-bg-color: #00FF00;
 }
 
+h2 {
+	font-size: 60px;
+	margin-left: -85px;
+	width: 125%;
+}
+
 /* Styling for nav and header */
 nav {
 	background-color: var(--main-bg-color);
@@ -9,78 +15,96 @@ nav {
 	height: 10vh;
 }
 
-.navbar-toggler-icon {
-	height: 4rem;
-	width: 4rem;
-}
-
-.navbar-toggler {
-	margin-right: 20px;
-}
-
-nav .navbar-nav{
-	display: none;
-}
-
-header div {
-	background-color: #EBEBED;
-	width: 40vw;
-	float: right;
-	text-align: right;
-	border-radius: 0 0 10px 10px;
-}
-
-#menu{
-	box-shadow: 0 .5rem 1rem .5rem rgba(0,0,0,.2);
-}
-
-header .nav-item {
-	display: inline;
-	padding-right: 30px;
-}
-
-header .nav-link {
-	font-size: 40px;
-	color: #000000;
-}
-
-header .active{
-	background-color: var(--main-bg-color);
-}
-
-div {
-	clear: both;
-}
-
 #logo {
 	width: 40vw;
 }
 
-nav .active{
+/* Toggler Styling */
+.navbar-toggler {
+	margin-right: 20px;
+}
+
+.navbar-toggler-icon {
+	height: 4rem;
+	width: 4rem;
+}
+/*  */
+
+/* Styling side nav */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    float: right;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 180px;
+    background-color: #EBEBED;
+}
+
+#mySidenav .nav-link { /* all links */
+	font-size: 50px;
+	color: #000000;
+	margin: 15px;
+    padding: 8px 8px 8px 32px;
+	margin-left: 5px;
+	white-space: nowrap;
+	transition: 0.3s;
+}
+
+#mySidenav .nav-item:active { /* Selected Page */
 	background-color: #FFFFFF;
 }
+
+#mySidenav .active{ /* Current Page */
+	background-color: #d7d7de;
+	border-left: 15px solid var(--main-bg-color);
+	
+}
+
+.sidenav .closebtn {
+	text-decoration: none;
+	color: #818181;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 110px;
+    margin-left: 50px;
+  }
+
+.fa, .fas {
+	font-size: 60px!important;
+}
+/*  */
 
 header{
 	position: sticky;	
 	top: 0;
 	z-index: 10;
 }
+
+/* Hiding large screen nav */
+nav .navbar-nav{
+	display: none;
+}
+/*  */
+
 /**/
 
 /* Styling Tables */
 .table{
 	border-collapse: collapse;
 	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-
 	margin-left: -85px;
 	width: 125%;
 	font-size: 40px;
-	/* margin-right: 40px;  */
 }
 
 .table th, .table td{
 	text-align: center;
-	
 	padding: 40px;
 }
 
@@ -107,13 +131,13 @@ th{
 	margin: 10px;
 	display: inline-block;
 
-	font-size: 35px;
+	font-size: 40px;
 	width: 30vw;
-	height: 6vh;
+	height: 8vh;
 }
 
 #summary span{
-	font-size: 40px;
+	font-size: 50px;
 }
 /**/
 
@@ -142,4 +166,15 @@ th{
 
 .col-md-12{
 	text-align: center;
+}
+
+#table-header #swipe{
+	font-weight: lighter;
+	font-size: 40px;
+}
+
+/* Styling Charts and Graphs */
+#graph {
+	/* margin-left: -85px; */
+	width: 110%;
 }

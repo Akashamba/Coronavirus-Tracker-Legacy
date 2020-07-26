@@ -1,5 +1,11 @@
 /* Styling for large devices */
 @media screen and (min-width: 992px){
+	h2 {
+		font-size: 40px;
+		width: 100%;
+		margin-left: 0px;  
+		margin-right: 0px;
+	}
 	/* Styling nav*/
 	nav{
 		height: 8vw;
@@ -27,6 +33,7 @@
 
 	nav .nav-link {
 		font-size: 1rem;
+		white-space: nowrap;
 	}
 
 	nav .nav-item {
@@ -39,6 +46,10 @@
 
 	nav .nav-item:hover{
 		background-color: #EBEBED;
+	}
+
+	nav .active{ /* Current Page */
+		background-color: #FFFFFF;
 	}
 	/**/
 
@@ -63,8 +74,8 @@
 	.table{
 		font-size: 16px;
 		width: 100%;
-		margin-left: -13px;  
-		margin-right: -13px;
+		margin-left: 0px;  
+		margin-right: 0px;
 	}
 
 	.table th, .table td{
@@ -74,5 +85,6 @@
 	#table-header{
 		font-size: 32px;
 	}
+	/**/
 }
 /**/
