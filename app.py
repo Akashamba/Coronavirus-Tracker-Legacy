@@ -47,7 +47,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html', result=get_india_data())
+    return render_template('index.html', india=get_india_data(), world=get_world_data())
 
 
 @app.route('/india')
