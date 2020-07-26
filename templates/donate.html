@@ -17,6 +17,8 @@
 	<link rel="shortcut icon" href="{{ url_for('static', filename='images/virus.ico') }}" type="image/x-icon">
 
 	<title>Covid-19 Tracker</title>
+
+	<script src="https://kit.fontawesome.com/ccec0b4920.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	
@@ -26,7 +28,7 @@
 			<a class="navbar-brand" href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/logo.png') }}" id="logo"></a>
 
 			<button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
-				<span class="navbar-toggler-icon"></span>
+				<span class="navbar-toggler-icon" onclick="openNav()"></span>
 			</button>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
@@ -35,18 +37,21 @@
 				<li class="nav-item active"><a class="nav-link" href="{{ url_for('donate') }}">Donation</a></li>				
 			</ul>
 		</nav>
-		<div class="collapse navbar-collapse" id="menu">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}">India Stats</a></li>
-				<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}">World Stats</a></li>
-				<li class="nav-item active"><a class="nav-link" href="{{ url_for('donate') }}">Donation</a></li>				
-			</ul>
-		</div>
 	</header>
+
+	<div class="sidenav" id="mySidenav">
+		<ul class="navbar-nav ml-auto">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}" onclick="closeNav()"><i class="fa fa-home" aria-hidden="true"></i> &nbsp; Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}" onclick="closeNav()"><i class="fas fa-dharmachakra" aria-hidden="true"></i> &nbsp; Indian Statistics</a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}" onclick="closeNav()"><i class="fas fa-globe-americas" aria-hidden="true"></i> &nbsp; Global Statistics</a></li>
+			<li class="nav-item active"><a class="nav-link" href="{{ url_for('donate') }}" onclick="closeNav()"><i class="fas fa-rupee-sign" aria-hidden="true"></i> &nbsp; &nbsp; Donate</a></li>
+		</ul>
+	</div>
 	
 	<div class="container" id="donate-container">
 		<a href="https://www.pmcares.gov.in/en/#" target="_blank"id="donate-link"><div id="donate-div"><p>Donate to PM Cares</p></div></a>
 	</div>
+	<script src="{{ url_for('static', filename='js/navigation.js') }}"></script>
 </body>
 </html>
