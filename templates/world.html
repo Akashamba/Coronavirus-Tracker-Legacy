@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">	
 
@@ -24,7 +24,7 @@
 	<header>
 
 		<nav class="navbar navbar-expand-lg navbar-light">		
-			<a class="navbar-brand" href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/logo.png') }}" id="logo"></a>
+			<a class="navbar-brand" href="{{ url_for('home') }}"><img alt="Coronavirus Tracker Logo" src="{{ url_for('static', filename='images/logo.png') }}" id="logo"></a>
 
 			<button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
 				<span class="navbar-toggler-icon" onclick="openNav()"></span>
@@ -40,7 +40,7 @@
 
 	<div class="sidenav" id="mySidenav">
 		<ul class="navbar-nav ml-auto">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<span class="closebtn" onclick="closeNav()">&times;</span>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}" onclick="closeNav()"><i class="fa fa-home" aria-hidden="true"></i> &nbsp; Home</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}" onclick="closeNav()"><i class="fas fa-dharmachakra" aria-hidden="true"></i> &nbsp; Indian Statistics</a></li>
 			<li class="nav-item active"><a class="nav-link" href="{{ url_for('world') }}" onclick="closeNav()"><i class="fas fa-globe-americas" aria-hidden="true"></i> &nbsp; Global Statistics</a></li>
@@ -49,11 +49,14 @@
 	</div>
 
 	<div class="container">
+
+		<button onclick="topFunction()" id="myBtn" title="Go to top">&#8963;</button>
+
 		<br><h2>Global Statistics</h2>
 		<div class="row">
 			<div class="col-md-12">
 			{% for key, value in result[0].items() %}
-				<div id="summary"> <span>{{ value }}</span> <br> <b>{{ key }}</b> </div>
+				<div class="summary"> <span>{{ value }}</span> <br> <b>{{ key }}</b> </div>
 			{% endfor %}	
 			</div>
 		</div>
@@ -61,8 +64,8 @@
 		<br>
 
 		<table class="table table-striped table-hover table-responsive-lg custom">
-			<tr><th colspan="6" id="table-header">Global Data &nbsp;<span id="swipe" class="d-lg-none">Swipe &rarr;</span></th></tr>
-			<tr><th>#</th><th>Position</th><th>Confirmed</th><th>Recovered</th><th>Deaths</th></tr>
+			<tr><th colspan="5" id="table-header">Global Data &nbsp;<span class="swipe d-lg-none">Swipe &rarr;</span></th></tr>
+			<tr><th>#</th><th>Country</th><th>Confirmed</th><th>Recovered</th><th>Deaths</th></tr>
 			{% for i in range(1,result|length) %}
 				<tr>
 					{% for key, value in result[i].items() %}
@@ -73,5 +76,6 @@
 		</table>
 	</div>
 	<script src="{{ url_for('static', filename='js/navigation.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/scrollup.js') }}"></script>
 </body>
 </html>
