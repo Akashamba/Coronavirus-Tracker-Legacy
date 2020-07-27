@@ -40,8 +40,8 @@
 	</header>
 
 	<div class="sidenav" id="mySidenav">
+		<span class="closebtn" onclick="closeNav()">&times;</span>
 		<ul class="navbar-nav ml-auto">
-			<span class="closebtn" onclick="closeNav()">&times;</span>
 			<li class="nav-item active"><a class="nav-link" href="{{ url_for('home') }}" onclick="closeNav()"><i class="fa fa-home" aria-hidden="true"></i> &nbsp; Home</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}" onclick="closeNav()"><i class="fas fa-dharmachakra" aria-hidden="true"></i> &nbsp; Indian Statistics</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}" onclick="closeNav()"><i class="fas fa-globe-americas" aria-hidden="true"></i> &nbsp; Global Statistics</a></li>
@@ -100,7 +100,7 @@
 		</table>
 
 		
-		<iframe class="graph" src="https://ourworldindata.org/coronavirus-data-explorer?tab=map&zoomToSelection=true&year=2020-02-20&country=~OWID_WRL&casesMetric=true&totalFreq=true&hideControls=true&smoothing=0&pickerMetric=location&pickerSort=asc" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+		<iframe class="graph" src="https://ourworldindata.org/coronavirus-data-explorer?tab=map&zoomToSelection=true&year=2020-02-20&country=~OWID_WRL&casesMetric=true&totalFreq=true&hideControls=true&smoothing=0&pickerMetric=location&pickerSort=asc" style="width: 100%; height: 600px; border: 0px none;"></iframe>
 		<div class="flourish-embed flourish-chart col" data-src="story/230085"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 		<iframe class="graph" src="https://ourworldindata.org/grapher/full-list-cumulative-total-tests-per-thousand?time=2020-03-07..&country=BRA~IND~USA" style="width: 100%; height: 600px; border: 0px none;"></iframe>
 

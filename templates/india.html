@@ -42,8 +42,8 @@
 	</header>
 
 	<div class="sidenav" id="mySidenav">
+		<span class="closebtn" onclick="closeNav()">&times;</span>
 		<ul class="navbar-nav ml-auto">
-			<span class="closebtn" onclick="closeNav()">&times;</span>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}" onclick="closeNav()"><i class="fa fa-home" aria-hidden="true"></i> &nbsp; Home</a></li>
 			<li class="nav-item active"><a class="nav-link" href="{{ url_for('india') }}" onclick="closeNav()"><i class="fas fa-dharmachakra" aria-hidden="true"></i> &nbsp; Indian Statistics</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}" onclick="closeNav()"><i class="fas fa-globe-americas" aria-hidden="true"></i> &nbsp; Global Statistics</a></li>
