@@ -53,6 +53,12 @@
 	}
 	/**/
 
+	/* Styling home pic */
+	#home-pic{
+		width: 38%;
+	}
+	/*  */
+
 	/*Styling summary tabs*/
 	.summary{
 		transition-duration: 0.8s;
@@ -88,15 +94,31 @@
 	}
 	/**/
 
-	/* Scroll up Buttoin */
+	/* Stylings Charts and Graphs */
+	.graph {
+		width: 100%!important;
+		margin-left: 0px;  
+		margin-right: 0px;
+	}
+	/*  */
+
+	/* Scroll up Button */
 	#myBtn {
-		background-color: #EBEBED;
 		font-size: 18px;
-		padding-top: 40px;
+		padding-top: 10px;
+		width: 40px;
+		height: 40px;
 	}
 
 	#myBtn:hover {
 		background-color: #00FF00;
 	  }
+	/*  */
+
+	/* footer */
+	footer{
+		height: 20vh;
+		text-align: center;
+	}
 }
 /**/

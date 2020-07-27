@@ -62,7 +62,12 @@ def world():
 
 @app.route('/donate')
 def donate():
-    return render_template('donate.html', result=get_india_data())
+    return render_template('donate.html')
+
+
+@app.route('/credits')
+def credit():
+    return render_template('credits.html')
 
 
 if __name__ == "__main__":

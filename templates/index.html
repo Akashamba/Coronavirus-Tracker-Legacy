@@ -34,7 +34,8 @@
 				<li class="nav-item active"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}">India Stats</a></li>
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}">Global Stats</a></li>
-				<li class="nav-item"><a class="nav-link" href="{{ url_for('donate') }}">Donate</a></li>				
+				<li class="nav-item"><a class="nav-link" href="{{ url_for('donate') }}">Donate</a></li>
+				<!-- <li class="nav-item"><a class="nav-link" href="{{ url_for('credit') }}"><i id="lgicon" class="fab fa-creative-commons-by" aria-hidden="true"></i></a></li>	 -->
 			</ul>
 		</nav>
 	</header>
@@ -46,12 +47,20 @@
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}" onclick="closeNav()"><i class="fas fa-dharmachakra" aria-hidden="true"></i> &nbsp; Indian Statistics</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}" onclick="closeNav()"><i class="fas fa-globe-americas" aria-hidden="true"></i> &nbsp; Global Statistics</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('donate') }}" onclick="closeNav()"><i class="fas fa-rupee-sign" aria-hidden="true"></i> &nbsp; &nbsp; Donate</a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ url_for('credit') }}" onclick="closeNav()"><i class="fab fa-creative-commons-by" aria-hidden="true"></i> &nbsp; &nbsp; Credits</a></li>
 		</ul>
+
+		<br><br>
+
+		<p id="nav-text-left">Stay Home,</p>
+		<p id="nav-text-right">Stay Safe</p>
 	</div>
 	
 	<div class="container">
-
 		<button onclick="topFunction()" id="myBtn" title="Go to top">&#8963;</button>
+		
+		<br><h2>Home</h2>
+		<img id="home-pic" src="{{ url_for('static', filename='images/home.jpg') }}" alt="man wearing mask and stop sign">
 
 		<br><h2>Indian Statistics</h2>
 		<div class="row">
@@ -99,13 +108,14 @@
 			{% endfor %}
 		</table>
 
-		
 		<iframe class="graph" src="https://ourworldindata.org/coronavirus-data-explorer?tab=map&zoomToSelection=true&year=2020-02-20&country=~OWID_WRL&casesMetric=true&totalFreq=true&hideControls=true&smoothing=0&pickerMetric=location&pickerSort=asc" style="width: 100%; height: 600px; border: 0px none;"></iframe>
-		<div class="flourish-embed flourish-chart col" data-src="story/230085"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+		<div class=" graph flourish-embed flourish-chart col" data-src="story/230085"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 		<iframe class="graph" src="https://ourworldindata.org/grapher/full-list-cumulative-total-tests-per-thousand?time=2020-03-07..&country=BRA~IND~USA" style="width: 100%; height: 600px; border: 0px none;"></iframe>
 
 
 	</div>
+
+	<footer>Stay home stay safe</footer>
 	<script src="{{ url_for('static', filename='js/navigation.js') }}"></script>
 	<script src="{{ url_for('static', filename='js/scrollup.js') }}"></script>
 </body>

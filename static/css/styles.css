@@ -75,9 +75,28 @@ nav {
     margin-left: 50px;
   }
 
-.fa, .fas {
+.fa, .fas, .fab {
 	font-size: 60px!important;
 }
+
+#nav-text-left, #nav-text-right {
+	display: none;
+	font-size: 80px;
+	color: #9e9ead;
+	padding-top: 80px;
+	white-space: nowrap;
+}
+
+#nav-text-left{
+	float: left;
+	padding-left: 40px;
+}
+
+#nav-text-right{
+	float: right;
+	padding-right: 40px;
+}
+
 /*  */
 
 header{
@@ -90,8 +109,14 @@ header{
 nav .navbar-nav{
 	display: none;
 }
-/*  */
+/**/
 
+/* Styling home image */
+#home-pic{
+	width: 90%;
+	margin: 0 auto;
+	display: block;
+}
 /**/
 
 /* Styling Tables */
@@ -174,9 +199,9 @@ th{
 }
 
 /* Styling Charts and Graphs */
-#graph {
+.graph {
 	margin-left: -85px;
-	width: 110%;
+	width: 125%!important;
 }
 /**/
 
@@ -189,12 +214,14 @@ th{
 	z-index: 99; 
 	border: none;
 	outline: none;
-	background-color: #00FF00;
+	background-color: #EBEBED;
 	color: #000000;
 	cursor: pointer; 
-	padding: 15px; 
+	padding: 10px; 
 	border-radius: 10px; 
 	font-size: 60px;
-	padding-top: 40px;
+	width: 80px;
+	height: 80px;
+	box-shadow: 1rem 1rem 1rem 0.5rem rgba(0,0,0,.15);
   }
 /**/

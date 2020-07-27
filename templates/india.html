@@ -37,6 +37,7 @@
 				<li class="nav-item active"><a class="nav-link" href="{{ url_for('india') }}">India Stats</a></li>
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}">World Stats</a></li>
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('donate') }}">Donation</a></li>				
+				<!-- <li class="nav-item"><a class="nav-link" href="{{ url_for('credit') }}">Credits</a></li>	 -->
 			</ul>
 		</nav>
 	</header>
@@ -48,6 +49,7 @@
 			<li class="nav-item active"><a class="nav-link" href="{{ url_for('india') }}" onclick="closeNav()"><i class="fas fa-dharmachakra" aria-hidden="true"></i> &nbsp; Indian Statistics</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}" onclick="closeNav()"><i class="fas fa-globe-americas" aria-hidden="true"></i> &nbsp; Global Statistics</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('donate') }}" onclick="closeNav()"><i class="fas fa-rupee-sign" aria-hidden="true"></i> &nbsp; &nbsp; Donate</a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ url_for('credit') }}" onclick="closeNav()"><i class="fab fa-creative-commons-by" aria-hidden="true"></i> &nbsp; &nbsp; Credits</a></li>
 		</ul>
 	</div>
 
@@ -78,6 +80,7 @@
 			{% endfor %}
 		</table>
 	</div>
+	<footer>Stay home stay safe</footer>
 	<script src="{{ url_for('static', filename='js/navigation.js') }}"></script>
 	<script src="{{ url_for('static', filename='js/scrollup.js') }}"></script>
 </body>

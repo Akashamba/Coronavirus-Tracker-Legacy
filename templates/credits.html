@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">	
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/large.css') }}">
+	
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/virus.ico') }}" type="image/x-icon">
+
+	<title>Covid-19 Tracker</title>
+
+	<script src="https://kit.fontawesome.com/ccec0b4920.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	
+	<header>
+
+		<nav class="navbar navbar-expand-lg navbar-light">		
+			<a class="navbar-brand" href="{{ url_for('home') }}"><img alt="Coronavirus Tracker Logo" src="{{ url_for('static', filename='images/logo.png') }}" id="logo"></a>
+	
+			<button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+				<span id="navbutton" class="navbar-toggler-icon" onclick="openNav()"></span>
+			</button>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}">India Stats</a></li>
+				<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}">Global Stats</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('donate') }}">Donate</a></li>	
+                <!-- <li class="nav-item"><a class="nav-link" href="{{ url_for('credit') }}">Credits</a></li>				 -->
+			</ul>
+		</nav>
+	</header>
+
+	<div class="sidenav" id="mySidenav">
+		<span class="closebtn" onclick="closeNav()">&times;</span>
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}" onclick="closeNav()"><i class="fa fa-home" aria-hidden="true"></i> &nbsp; Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}" onclick="closeNav()"><i class="fas fa-dharmachakra" aria-hidden="true"></i> &nbsp; Indian Statistics</a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}" onclick="closeNav()"><i class="fas fa-globe-americas" aria-hidden="true"></i> &nbsp; Global Statistics</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('donate') }}" onclick="closeNav()"><i class="fas fa-rupee-sign" aria-hidden="true"></i> &nbsp; &nbsp; Donate</a></li>
+            <li class="nav-item active"><a class="nav-link" href="{{ url_for('credit') }}" onclick="closeNav()"><i class="fab fa-creative-commons-by" aria-hidden="true"></i> &nbsp; &nbsp; Credits</a></li>
+		</ul>
+    </div>
+
+    <div class="container">
+        <h2>Credits</h2>
+        <ul>
+            <li>Logo: <a target="_blank" href="https://www.instagram.com/breakinggrids.xo/">Siddharth Singh</a></li>
+            <li>Home Picture of man wearing mask and stop sign:<a href="https://www.freevector.com/man-wearing-mask-and-stop-sign-30888">FreeVector.com</a></li>
+        </ul>
+    </div>
+    <footer>Stay home stay safe</footer>
+</body>
+</html>
