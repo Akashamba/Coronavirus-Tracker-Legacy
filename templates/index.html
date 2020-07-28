@@ -34,8 +34,17 @@
 				<li class="nav-item active"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}">India Stats</a></li>
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}">Global Stats</a></li>
-				<li class="nav-item"><a class="nav-link" href="{{ url_for('donate') }}">Donate</a></li>
-				<!-- <li class="nav-item"><a class="nav-link" href="{{ url_for('credit') }}"><i id="lgicon" class="fab fa-creative-commons-by" aria-hidden="true"></i></a></li>	 -->
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  More
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="{{ url_for('donate') }}">Donate</a>
+					  <a class="dropdown-item" href="#">Do's and Don'ts</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="{{ url_for('credit') }}">Credits</a>
+					</div>
+				  </li>
 			</ul>
 		</nav>
 	</header>
@@ -60,7 +69,7 @@
 		<button onclick="topFunction()" id="myBtn" title="Go to top">&#8963;</button>
 		
 		<br><h2>Home</h2>
-		<img id="home-pic" src="{{ url_for('static', filename='images/home.jpg') }}" alt="man wearing mask and stop sign">
+		<img class="top-pic" src="{{ url_for('static', filename='images/home.jpg') }}" alt="man wearing mask and stop sign">
 
 		<br><h2>Indian Statistics</h2>
 		<div class="row">
@@ -73,7 +82,7 @@
 
 		<br>
 
-		<table class="table table-striped table-hover table-responsive-lg custom">
+		<table id="table1" onload="sortTable('table1')" class="table table-striped table-hover table-responsive-lg custom">
 			<tr><th colspan="6" id="table-header">Indian Statewise Summary &nbsp;<span class="swipe d-lg-none">Swipe &rarr;</span></th></tr>
 			<tr><th>#</th><th>State</th><th>Confirmed</th><th>Active</th><th>Recovered</th><th>Deaths</th></tr>
 			{% for i in range(1,11) %}
@@ -96,7 +105,7 @@
 
 		<br>
 
-		<table class="table table-striped table-hover table-responsive-lg custom">
+		<table id="world-table" class="table table-striped table-hover table-responsive-lg custom">
 			<tr><th colspan="5" id="table-header2">Global Summary &nbsp;<span class="swipe d-lg-none">Swipe &rarr;</span></th></tr>
 			<tr><th>#</th><th>Country</th><th>Confirmed</th><th>Recovered</th><th>Deaths</th></tr>
 			{% for i in range(1,11) %}
@@ -108,14 +117,25 @@
 			{% endfor %}
 		</table>
 
-		<iframe class="graph" src="https://ourworldindata.org/coronavirus-data-explorer?tab=map&zoomToSelection=true&year=2020-02-20&country=~OWID_WRL&casesMetric=true&totalFreq=true&hideControls=true&smoothing=0&pickerMetric=location&pickerSort=asc" style="width: 100%; height: 600px; border: 0px none;"></iframe>
-		<div class=" graph flourish-embed flourish-chart col" data-src="story/230085"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-		<iframe class="graph" src="https://ourworldindata.org/grapher/full-list-cumulative-total-tests-per-thousand?time=2020-03-07..&country=BRA~IND~USA" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+		<br>
+
+		<h2>Charts and Graphs</h2>
+		<iframe class="graph" src="https://ourworldindata.org/coronavirus-data-explorer?tab=map&zoomToSelection=true&year=2020-02-20&country=~OWID_WRL&casesMetric=true&totalFreq=true&hideControls=true&smoothing=0&pickerMetric=location&pickerSort=asc" style="width: 100%; height: 600px; border: 0px none;"></iframe><br>
+		<div class="graph flourish-embed flourish-chart col" data-src="story/230085"><script src="https://public.flourish.studio/resources/embed.js"></script></div><br>
+		<iframe class="graph" src="https://ourworldindata.org/grapher/full-list-cumulative-total-tests-per-thousand?time=2020-03-07..&country=BRA~IND~USA~RUS~ZAF~MEX~PER~CHL~GBR~IRN~PAK~ESP~SAU~COL" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe><br>
+
 
 
 	</div>
+	
+	<br>
 
-	<footer>Stay home stay safe</footer>
+	<footer>
+		<span><a href="{{ url_for('home') }}">Home</a> &nbsp; <a href="{{ url_for('india') }}">India Stats</a> &nbsp; <a href="{{ url_for('world') }}">World Stats</a> &nbsp; <a href="{{ url_for('donate') }}">Donate</a> &nbsp; <a href="{{ url_for('dos') }}">Do's and Don'ts</a> &nbsp; <a href="{{ url_for('credit') }}">Credits</a></span><br>
+		<span>Stay Home, Stay Safe</span><br>
+		<span id="last">&copy; Akash Ambashankar</span><br>
+		<a href="https://github.com/akashamba"><i id="github" class="fab fa-github"></i></a>
+	</footer>
 	<script src="{{ url_for('static', filename='js/navigation.js') }}"></script>
 	<script src="{{ url_for('static', filename='js/scrollup.js') }}"></script>
 </body>

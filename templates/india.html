@@ -36,8 +36,17 @@
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
 				<li class="nav-item active"><a class="nav-link" href="{{ url_for('india') }}">India Stats</a></li>
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}">World Stats</a></li>
-				<li class="nav-item"><a class="nav-link" href="{{ url_for('donate') }}">Donation</a></li>				
-				<!-- <li class="nav-item"><a class="nav-link" href="{{ url_for('credit') }}">Credits</a></li>	 -->
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  More
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="{{ url_for('donate') }}">Donate</a>
+					  <a class="dropdown-item" href="#">Do's and Don'ts</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="{{ url_for('credit') }}">Credits</a>
+					</div>
+				  </li>
 			</ul>
 		</nav>
 	</header>
@@ -58,6 +67,8 @@
 		<button onclick="topFunction()" id="myBtn" title="Go to top">&#8963;</button>
 
 		<br><h2>Indian Statistics</h2>
+
+		<img class="top-pic" src="{{ url_for('static', filename='images/india.jpg') }}" alt="man-wearing-mask">
 		<div class="row">
 			<div class="col-md-12">
 			{% for key, value in result[0].items() %}
@@ -78,9 +89,22 @@
 					{% endfor %}
 				</tr>
 			{% endfor %}
-		</table>
+		</table><br>
+
+	<h2>Charts and Graphs</h2>
+	<iframe class="graph" src="https://ourworldindata.org/coronavirus-data-explorer?yScale=log&zoomToSelection=true&country=~IND&deathsMetric=true&totalFreq=true&aligned=true&hideControls=true&smoothing=0&pickerMetric=location&pickerSort=asc" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe><br>
+	<div class="graph flourish-embed flourish-map" data-src="story/225979"><script src="https://public.flourish.studio/resources/embed.js"></script></div><br>
+	<iframe class="graph" src="https://ourworldindata.org/coronavirus-data-explorer?yScale=log&zoomToSelection=true&country=USA~DEU~IND~BRA~ITA~IDN~ZAF~MEX~NZL~COG&deathsMetric=true&dailyFreq=true&aligned=true&smoothing=7&pickerMetric=location&pickerSort=asc" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
 	</div>
-	<footer>Stay home stay safe</footer>
+
+	<br>
+
+	<footer>
+		<span><a href="{{ url_for('home') }}">Home</a> &nbsp; <a href="{{ url_for('india') }}">India Stats</a> &nbsp; <a href="{{ url_for('world') }}">World Stats</a> &nbsp; <a href="{{ url_for('donate') }}">Donate</a> &nbsp; <a href="{{ url_for('dos') }}">Do's and Don'ts</a> &nbsp; <a href="{{ url_for('credit') }}">Credits</a></span><br>
+		<span>Stay Home, Stay Safe</span><br>
+		<span id="last">&copy; Akash Ambashankar</span><br>
+		<a href="https://github.com/akashamba"><i id="github" class="fab fa-github"></i></a>
+	</footer>
 	<script src="{{ url_for('static', filename='js/navigation.js') }}"></script>
 	<script src="{{ url_for('static', filename='js/scrollup.js') }}"></script>
 </body>

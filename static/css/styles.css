@@ -76,7 +76,7 @@ nav {
   }
 
 .fa, .fas, .fab {
-	font-size: 60px!important;
+	font-size: 60px;
 }
 
 #nav-text-left, #nav-text-right {
@@ -111,8 +111,8 @@ nav .navbar-nav{
 }
 /**/
 
-/* Styling home image */
-#home-pic{
+/* Styling top image */
+.top-pic{
 	width: 90%;
 	margin: 0 auto;
 	display: block;
@@ -122,7 +122,7 @@ nav .navbar-nav{
 /* Styling Tables */
 .table{
 	border-collapse: collapse;
-	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 	margin-left: -85px;
 	width: 125%;
 	font-size: 40px;
@@ -152,7 +152,7 @@ th{
 	text-align: center;
 	background-color: #EBEBED;
 	border-radius: 10px;
-	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 	margin: 10px;
 	display: inline-block;
 
@@ -225,3 +225,40 @@ th{
 	box-shadow: 1rem 1rem 1rem 0.5rem rgba(0,0,0,.15);
   }
 /**/
+
+/* Footer */
+footer{
+	padding: 10px;
+	height: 25vh;
+	font-size: 35px;
+
+	text-align: center;
+	background-color: #EBEBED;
+	line-height: 45px;
+}
+
+footer span{
+	line-height: 90px;
+}
+
+footer a {
+	color: #9e9ead;
+	text-decoration: underline;
+}
+
+footer #last{
+	color: #000000;
+}
+
+#last a{
+	text-decoration: none;
+}
+
+#last a:hover {
+	color: #00FF00;
+}
+
+#github {
+	font-size: 60px;
+}
+/*  */

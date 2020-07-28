@@ -1,5 +1,9 @@
 /* Styling for large devices */
 @media screen and (min-width: 992px){
+	body{
+		--main-bg-color: #00FF00;
+	}
+
 	h2 {
 		font-size: 40px;
 		width: 100%;
@@ -22,6 +26,14 @@
 
 	#menu {
 		display: none;
+	}
+
+	.dropdown-menu {
+		left: -100%;
+	}
+
+	.dropdown-item:hover {
+		background-color: var(--main-bg-color);
 	}
 
 	nav .nav-item{
@@ -53,8 +65,8 @@
 	}
 	/**/
 
-	/* Styling home pic */
-	#home-pic{
+	/* Styling top pic */
+	.top-pic{
 		width: 38%;
 	}
 	/*  */
@@ -68,7 +80,7 @@
 	}
 
 	.summary:hover{
-		background-color: #00FF00;	
+		background-color: var(--main-bg-color);	
 	}
 
 	.summary span{
@@ -111,14 +123,23 @@
 	}
 
 	#myBtn:hover {
-		background-color: #00FF00;
+		background-color: var(--main-bg-color);
 	  }
 	/*  */
 
 	/* footer */
 	footer{
-		height: 20vh;
-		text-align: center;
+		padding: 30px;
+		height: 30vh;
+		font-size: 17px;
+	}
+
+	footer span{
+		line-height: 45px;
+	}
+
+	#github {
+		font-size: 35px;
 	}
 }
 /**/

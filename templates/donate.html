@@ -34,8 +34,17 @@
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}">India Stats</a></li>
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}">World Stats</a></li>
-				<li class="nav-item active"><a class="nav-link" href="{{ url_for('donate') }}">Donation</a></li>				
-				<!-- <li class="nav-item"><a class="nav-link" href="{{ url_for('credit') }}">Credits</a></li>	 -->
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  More
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="{{ url_for('donate') }}">Donate</a>
+					  <a class="dropdown-item" href="#">Do's and Don'ts</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="{{ url_for('credit') }}">Credits</a>
+					</div>
+				  </li>
 			</ul>
 		</nav>
 	</header>
@@ -54,7 +63,12 @@
 	<div class="container" id="donate-container">
 		<a href="https://www.pmcares.gov.in/en/#" target="_blank"id="donate-link"><div id="donate-div"><p>Donate to PM Cares</p></div></a>
 	</div>
-	<footer>Stay home stay safe</footer>
+	<footer>
+		<span><a href="{{ url_for('home') }}">Home</a> &nbsp; <a href="{{ url_for('india') }}">India Stats</a> &nbsp; <a href="{{ url_for('world') }}">World Stats</a> &nbsp; <a href="{{ url_for('donate') }}">Donate</a> &nbsp; <a href="{{ url_for('dos') }}">Do's and Don'ts</a> &nbsp; <a href="{{ url_for('credit') }}">Credits</a></span><br>
+		<span>Stay Home, Stay Safe</span><br>
+		<span id="last">&copy; Akash Ambashankar</span><br>
+		<a href="https://github.com/akashamba"><i id="github" class="fab fa-github"></i></a>
+	</footer>
 	<script src="{{ url_for('static', filename='js/navigation.js') }}"></script>
 </body>
 </html>
