@@ -9,8 +9,16 @@ def comma(n):
     return "".join([r] + d)
 
 
+def reorder(name):
+    try:
+        name.index(',')
+        return str(name.split(',', 1)[1]+" "+name.split(',', 1)[0])
+    except ValueError:
+        return name
+
+
 def get_url(url):
-    response = requests.get(url)
+    response = requests.get(url, verify=False)
     content = response.content.decode("utf8")
     return content
 
@@ -30,15 +38,24 @@ def get_india_data():
 def get_world_data():
     total = json.loads(get_url("https://api.covid19api.com/summary"))
 
-    world_data = [{"Confirmed": comma(total["Global"]["TotalConfirmed"]),
-                   "Recovered": comma(total["Global"]["TotalRecovered"]),
-                   "Deaths": comma(total["Global"]["TotalDeaths"])}]
+    world_data = [{"Confirmed": total["Global"]["TotalConfirmed"],
+                   "Recovered": total["Global"]["TotalRecovered"],
+                   "Deaths": total["Global"]["TotalDeaths"]}]
 
     for i in range(len(total["Countries"])):
-        world_data.append({"id": i + 1, "Country": total["Countries"][i]["Country"],
-                           "Confirmed": comma(total["Countries"][i]["TotalConfirmed"]),
-                           "Recovered": comma(total["Countries"][i]["TotalRecovered"]),
-                           "Deaths": comma(total["Countries"][i]["TotalDeaths"])})
+        world_data.append({"id": i + 1, "Country": reorder(total["Countries"][i]["Country"]),
+                           "Confirmed": total["Countries"][i]["TotalConfirmed"],
+                           "Recovered": total["Countries"][i]["TotalRecovered"],
+                           "Deaths": total["Countries"][i]["TotalDeaths"]})
+    world_data.sort(key=lambda x: (x['Confirmed'], x['Deaths']), reverse=True)
+
+    for i in range(len(total["Countries"])):
+        if i != 0:
+            world_data[i]["id"] = i
+        world_data[i]["Confirmed"] = comma(world_data[i]["Confirmed"])
+        world_data[i]["Recovered"] = comma(world_data[i]["Recovered"])
+        world_data[i]["Deaths"] = comma(world_data[i]["Deaths"])
+
     return world_data
 
 
@@ -68,6 +85,11 @@ def donate():
 @app.route('/credits')
 def credit():
     return render_template('credits.html')
+
+
+@app.route("/do's-and-don'ts")
+def dos():
+    return render_template('dos.html')
 
 
 if __name__ == "__main__":
