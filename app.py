@@ -104,8 +104,9 @@ def credit():
     return render_template('credits.html')
 
 
-@app.route("/do's-and-don'ts")
+@app.route("/dos-and-donts")
 def dos():
+    
     return render_template('dos.html')
 
 
