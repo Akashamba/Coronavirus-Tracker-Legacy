@@ -111,11 +111,27 @@ nav .navbar-nav{
 }
 /**/
 
-/* Styling top image */
+/* Styling images */
 .top-pic{
 	width: 90%;
 	margin: 0 auto;
 	display: block;
+}
+
+/* Donate Page */
+#modi{
+	width: 90%;
+	margin: 0 auto;
+	display: block;
+}
+
+#pmcares{
+	font-size: 35px;
+	line-height: 60px;
+}
+
+#donate-link{
+	font-size: 35px;
 }
 /**/
 
@@ -125,12 +141,18 @@ nav .navbar-nav{
 	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 	margin-left: -85px;
 	width: 125%;
+	height: 90vh; /* Making table vertically scrollable */
 	font-size: 40px;
 }
 
 .table th, .table td{
 	text-align: center;
 	padding: 40px;
+}
+
+#table-header .swipe, #table-header2 .swipe {
+	font-weight: lighter;
+	font-size: 40px;
 }
 
 td:nth-of-type(2) {
@@ -166,36 +188,8 @@ th{
 }
 /**/
 
-/* Styling Donate Link */
-#donate-link{
-	text-decoration: none;
-}
-
-#donate-container {
-	margin: 0;
-  	position: absolute;
-  	top: 50%;
-}
-
-#donate-div{
-	color: #000000;
-	background-color: var(--main-bg-color);
-	width: 60vw;
-	border-radius: 20px;
-	font-size: 50px;
-	height: 70px;
-	line-height: 50px;
-	text-align: center;
-	margin: 0 auto;
-}
-
 .col-md-12{
 	text-align: center;
-}
-
-#table-header .swipe, #table-header2 .swipe {
-	font-weight: lighter;
-	font-size: 40px;
 }
 
 /* Styling Charts and Graphs */
@@ -260,5 +254,11 @@ footer #last{
 
 #github {
 	font-size: 60px;
+}
+/*  */
+
+/* Credits */
+ul {
+	font-size: 35px;
 }
 /*  */

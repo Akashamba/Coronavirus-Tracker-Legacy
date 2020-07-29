@@ -12,7 +12,7 @@
 	}
 	/* Styling nav*/
 	nav{
-		height: 8vw;
+		height: 13vh;
 	}
 
 	.navbar-toggler-icon {
@@ -53,7 +53,7 @@
 	}
 
 	#logo {
-		width: 20vw;
+		width: 18vw;
 	}
 
 	nav .nav-item:hover{
@@ -65,9 +65,23 @@
 	}
 	/**/
 
-	/* Styling top pic */
+	/* Styling images */
 	.top-pic{
 		width: 38%;
+	}
+
+	#modi{
+		float: left;
+		width: 38%;
+	}
+
+	#pmcares{
+		line-height: 38px;
+		display: block;
+	}
+
+	#donate-link, #pmcares{
+		font-size: 16px;
 	}
 	/*  */
 
@@ -95,6 +109,15 @@
 		margin-left: 0px;  
 		margin-right: 0px;
 	}
+	/* Making table vertically scrollable */
+	.my-custom-scrollbar {
+		position: relative;
+		height: 90vh;
+		overflow: auto;
+		}
+	.table-wrapper-scroll-y {
+		display: block;
+		}
 
 	.table th, .table td{
 		padding: 12px;
@@ -141,5 +164,11 @@
 	#github {
 		font-size: 35px;
 	}
+
+	/* Credits */
+	ul {
+		font-size: 16px;
+	}
+	/*  */
 }
 /**/
