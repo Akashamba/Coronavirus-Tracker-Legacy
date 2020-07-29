@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/large.css') }}">
 	
-	<link rel="shortcut icon" href="{{ url_for('static', filename='images/virus.ico') }}" type="image/x-icon">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/virus.png') }}" type="image/x-icon">
 
 	<title>Covid-19 Tracker</title>
 
@@ -40,7 +40,7 @@
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 					  <a class="dropdown-item" href="{{ url_for('donate') }}">Donate</a>
-					  <a class="dropdown-item" href="#">Do's and Don'ts</a>
+					  <a class="dropdown-item" href="{{ url_for('dos') }}">Do's and Don'ts</a>
 					  <div class="dropdown-divider"></div>
 					  <a class="dropdown-item" href="{{ url_for('credit') }}">Credits</a>
 					</div>
@@ -56,14 +56,18 @@
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}" onclick="closeNav()"><i class="fas fa-dharmachakra" aria-hidden="true"></i> &nbsp; Indian Statistics</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}" onclick="closeNav()"><i class="fas fa-globe-americas" aria-hidden="true"></i> &nbsp; Global Statistics</a></li>
 			<li class="nav-item active"><a class="nav-link" href="{{ url_for('donate') }}" onclick="closeNav()"><i class="fas fa-rupee-sign" aria-hidden="true"></i> &nbsp; &nbsp; Donate</a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ url_for('dos') }}" onclick="closeNav()"><i class="fas fa-hands-wash"></i> &nbsp; &nbsp; Do's and Don'ts</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('credit') }}" onclick="closeNav()"><i class="fab fa-creative-commons-by" aria-hidden="true"></i> &nbsp; &nbsp; Credits</a></li>
 		</ul>
 	</div>
 	
-	<div class="container" id="donate-container">
-		<a href="https://www.pmcares.gov.in/en/#" target="_blank"id="donate-link"><div id="donate-div"><p>Donate to PM Cares</p></div></a>
-	</div>
-	<footer>
+	<div class="container"><br>
+		<h2><img id="modi" src="{{ url_for('static', filename='images/modi.jpg') }}"> Donate</h2>
+		<q id="pmcares">PM-CARES fund is aimed at strengthening the fight against COVID-19. It will further availability of quality treatment and encourage research on ways to beat Coronavirus. I urge people from all walks of life to contribute to PM-CARES. Together, let's solve challenges of the present and protect the future.</q>
+		<a href="https://www.pmcares.gov.in/en/#" target="_blank"id="donate-link">Donate to PM CARES</a>
+	</div><br>
+
+	<footer class="footer fixed-bottom">
 		<span><a href="{{ url_for('home') }}">Home</a> &nbsp; <a href="{{ url_for('india') }}">India Stats</a> &nbsp; <a href="{{ url_for('world') }}">World Stats</a> &nbsp; <a href="{{ url_for('donate') }}">Donate</a> &nbsp; <a href="{{ url_for('dos') }}">Do's and Don'ts</a> &nbsp; <a href="{{ url_for('credit') }}">Credits</a></span><br>
 		<span>Stay Home, Stay Safe</span><br>
 		<span id="last">&copy; Akash Ambashankar</span><br>

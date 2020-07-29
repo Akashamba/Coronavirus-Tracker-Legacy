@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/large.css') }}">
 	
-	<link rel="shortcut icon" href="{{ url_for('static', filename='images/virus.ico') }}" type="image/x-icon">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/virus.png') }}" type="image/x-icon">
 
 	<title>Covid-19 Tracker</title>
 
@@ -42,7 +42,7 @@
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 					  <a class="dropdown-item" href="{{ url_for('donate') }}">Donate</a>
-					  <a class="dropdown-item" href="#">Do's and Don'ts</a>
+					  <a class="dropdown-item" href="{{ url_for('dos') }}">Do's and Don'ts</a>
 					  <div class="dropdown-divider"></div>
 					  <a class="dropdown-item" href="{{ url_for('credit') }}">Credits</a>
 					</div>
@@ -58,6 +58,7 @@
 			<li class="nav-item active"><a class="nav-link" href="{{ url_for('india') }}" onclick="closeNav()"><i class="fas fa-dharmachakra" aria-hidden="true"></i> &nbsp; Indian Statistics</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}" onclick="closeNav()"><i class="fas fa-globe-americas" aria-hidden="true"></i> &nbsp; Global Statistics</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('donate') }}" onclick="closeNav()"><i class="fas fa-rupee-sign" aria-hidden="true"></i> &nbsp; &nbsp; Donate</a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ url_for('dos') }}" onclick="closeNav()"><i class="fas fa-hands-wash"></i> &nbsp; &nbsp; Do's and Don'ts</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('credit') }}" onclick="closeNav()"><i class="fab fa-creative-commons-by" aria-hidden="true"></i> &nbsp; &nbsp; Credits</a></li>
 		</ul>
 	</div>
@@ -79,22 +80,25 @@
 
 		<br>
 
-		<table class="table table-striped table-hover table-responsive-lg custom">
-			<tr><th colspan="6" id="table-header">Indian Statewise Data &nbsp;<span class="swipe d-lg-none">Swipe &rarr;</span></th></tr>
-			<tr><th>#</th><th>State</th><th>Confirmed</th><th>Active</th><th>Recovered</th><th>Deaths</th></tr>
-			{% for i in range(1,result|length) %}
-				<tr>
-					{% for key, value in result[i].items() %}
-				        <td> {{ value }} </td>
-					{% endfor %}
-				</tr>
-			{% endfor %}
-		</table><br>
+		<div class="table-wrapper-scroll-y my-custom-scrollbar">
+			<table class="table table-striped table-hover table-responsive-lg custom">
+				<tr><th colspan="6" id="table-header">Indian Statewise Data &nbsp;<span class="swipe d-lg-none">Swipe &rarr;</span></th></tr>
+				<tr><th>#</th><th>State</th><th>Confirmed</th><th>Active</th><th>Recovered</th><th>Deaths</th></tr>
+				{% for i in range(1,result|length) %}
+					<tr>
+						{% for key, value in result[i].items() %}
+							<td> {{ value }} </td>
+						{% endfor %}
+					</tr>
+				{% endfor %}
+				<tr><th>#</th><th>State</th><th>Confirmed</th><th>Active</th><th>Recovered</th><th>Deaths</th></tr>
+			</table>
+		</div><br>
 
 	<h2>Charts and Graphs</h2>
 	<iframe class="graph" src="https://ourworldindata.org/coronavirus-data-explorer?yScale=log&zoomToSelection=true&country=~IND&deathsMetric=true&totalFreq=true&aligned=true&hideControls=true&smoothing=0&pickerMetric=location&pickerSort=asc" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe><br>
 	<div class="graph flourish-embed flourish-map" data-src="story/225979"><script src="https://public.flourish.studio/resources/embed.js"></script></div><br>
-	<iframe class="graph" src="https://ourworldindata.org/coronavirus-data-explorer?yScale=log&zoomToSelection=true&country=USA~DEU~IND~BRA~ITA~IDN~ZAF~MEX~NZL~COG&deathsMetric=true&dailyFreq=true&aligned=true&smoothing=7&pickerMetric=location&pickerSort=asc" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+	<iframe class="graph" src="https://ourworldindata.org/coronavirus-data-explorer?zoomToSelection=true&time=2020-03-14..&country=USA~BRA~GBR~IRN~RUS~ZAF~IND&cfrMetric=true&totalFreq=true&aligned=true&hideControls=true&smoothing=0&pickerMetric=location&pickerSort=asc" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
 	</div>
 
 	<br>

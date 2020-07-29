@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/large.css') }}">
 	
-	<link rel="shortcut icon" href="{{ url_for('static', filename='images/virus.ico') }}" type="image/x-icon">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/virus.png') }}" type="image/x-icon">
 
 	<title>Covid-19 Tracker</title>
 
@@ -40,7 +40,7 @@
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 					  <a class="dropdown-item" href="{{ url_for('donate') }}">Donate</a>
-					  <a class="dropdown-item" href="#">Do's and Don'ts</a>
+					  <a class="dropdown-item" href="{{ url_for('dos') }}">Do's and Don'ts</a>
 					  <div class="dropdown-divider"></div>
 					  <a class="dropdown-item" href="{{ url_for('credit') }}">Credits</a>
 					</div>
@@ -56,23 +56,41 @@
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}" onclick="closeNav()"><i class="fas fa-dharmachakra" aria-hidden="true"></i> &nbsp; Indian Statistics</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}" onclick="closeNav()"><i class="fas fa-globe-americas" aria-hidden="true"></i> &nbsp; Global Statistics</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ url_for('donate') }}" onclick="closeNav()"><i class="fas fa-rupee-sign" aria-hidden="true"></i> &nbsp; &nbsp; Donate</a></li>
-            <li class="nav-item active"><a class="nav-link" href="{{ url_for('credit') }}" onclick="closeNav()"><i class="fab fa-creative-commons-by" aria-hidden="true"></i> &nbsp; &nbsp; Credits</a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ url_for('dos') }}" onclick="closeNav()"><i class="fas fa-hands-wash"></i> &nbsp; Do's and Don'ts</a></li>
+			<li class="nav-item active"><a class="nav-link" href="{{ url_for('credit') }}" onclick="closeNav()"><i class="fab fa-creative-commons-by" aria-hidden="true"></i> &nbsp; Credits</a></li>
 		</ul>
     </div>
 
     <div class="container">
         <h2>Credits</h2>
         <ul>
-            <li>Logo: <a target="_blank" href="https://www.instagram.com/breakinggrids.xo/">Siddharth Singh</a></li>
-			<li>Home Picture of man wearing mask and stop sign:<a href="https://www.freevector.com/man-wearing-mask-and-stop-sign-30888">FreeVector.com</a></li>
-			<a href="https://www.freevector.com/dirty-and-clean-hand-concept-30875">FreeVector.com</a>
-			<a href="https://www.freevector.com/man-wearing-mask--30805">FreeVector.com</a>
-			<a href="https://www.freevector.com/stop-covid-19-design-30939">FreeVector.com</a>
-			<a href="https://www.freevector.com/hand-hygiene-design-30942">FreeVector.com</a>
-
-			dos and donts
-			<a href='https://www.freepik.com/free-photos-vectors/infographic'>Infographic vector created by freepik - www.freepik.com</a>
-			<a href='https://www.freepik.com/free-photos-vectors/banner'>Banner vector created by macrovector - www.freepik.com</a>
+			<li>Coronavirus Tracker Logo: <a target="_blank" href="https://www.instagram.com/breakinggrids.xo/">Siddharth Singh</a></li>
+			<br>
+			<li>Live Data:
+				<ul>
+					<li>Indian Data sourced from <a href="https://api.covid19india.org/">api.covid19india.org</a></li>
+					<li>Global Data sourced from <a href="https://api.covid19api.com/">api.covid19api.com</a></li>
+				</ul>
+			</li>
+			<br>
+			<li>Images:
+				<ul>
+					<li><a href="https://www.freevector.com/">FreeVector.com</a></li>
+					<li><a href="https://www.freepik.com/">freepik.com<a></li>
+					<li><a href="https://www.depositphotos.com/">depositphotos.com</a></li>
+				</ul>
+			</li>
+			<br>
+			<li>Graphs and Charts:
+				<ul>
+					<li><a href="https://ourworldindata.org/">ourworldindata.org</a></li>
+					<li><a href="https://flourish.studio">flourish.studio</a></li>
+				</ul>
+			</li>
+			<br>
+			<li>Do's and Don'ts sourced from: <a href="https://www.medlife.com/blog/covid-19-dos-and-donts/">medlife.com</a> </li>
+			<br>
+			<li>Icons: <a href="https://fontawesome.com/">Font Awesome</a></li>
         </ul>
     </div>
 	<footer>
