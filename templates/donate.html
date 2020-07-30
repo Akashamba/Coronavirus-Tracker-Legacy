@@ -36,7 +36,7 @@
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}">India Stats</a></li>
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}">World Stats</a></li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  More
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -63,12 +63,12 @@
 	</div>
 	
 	<div class="container"><br>
-		<h2><img id="modi" src="{{ url_for('static', filename='images/modi.jpg') }}"> Donate</h2>
+		<h2><img id="modi" src="{{ url_for('static', filename='images/modi.jpg') }}">Donate</h2>
 		<q id="pmcares">PM-CARES fund is aimed at strengthening the fight against COVID-19. It will further availability of quality treatment and encourage research on ways to beat Coronavirus. I urge people from all walks of life to contribute to PM-CARES. Together, let's solve challenges of the present and protect the future.</q>
 		<a href="https://www.pmcares.gov.in/en/#" target="_blank"id="donate-link">Donate to PM CARES</a>
 	</div><br>
 
-	<footer class="footer fixed-bottom">
+	<footer>
 		<span><a href="{{ url_for('home') }}">Home</a> &nbsp; <a href="{{ url_for('india') }}">India Stats</a> &nbsp; <a href="{{ url_for('world') }}">World Stats</a> &nbsp; <a href="{{ url_for('donate') }}">Donate</a> &nbsp; <a href="{{ url_for('dos') }}">Do's and Don'ts</a> &nbsp; <a href="{{ url_for('credit') }}">Credits</a></span><br>
 		<span>Stay Home, Stay Safe</span><br>
 		<span>&copy; Akash Ambashankar</span><br>

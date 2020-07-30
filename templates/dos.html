@@ -36,7 +36,7 @@
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}">India Stats</a></li>
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}">Global Stats</a></li>
                 <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  More
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -63,10 +63,145 @@
     </div>
 
     <div class="container">
+        
+        <br><h2>Do's and Don'ts</h2>
+        <p>Now more than ever, cleanliness hygine are an extremly important part of our lifestyle. Here are a few tips to help protect yourself.</p>
+        
+        <h2>Do's</h2>
 
+        <div id="dos-carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#dos-carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#dos-carousel" data-slide-to="1"></li>
+              <li data-target="#dos-carousel" data-slide-to="2"></li>
+              <li data-target="#dos-carousel" data-slide-to="3"></li>
+              <li data-target="#dos-carousel" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block" src="{{ url_for('static', filename='images/ph.jpg') }}" alt="Wash Hands">
+                <div class="carousel-caption d-none d-md-block">
+                <h4>Hand Wash</h4>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block" src="{{ url_for('static', filename='images/india.jpg') }}" alt="Cover Your Mouth & Nose">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>Cover Your Mouth & Nose</h4>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block" src="{{ url_for('static', filename='images/home.jpg') }}" alt="Consult A Doctor If Sick">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>Consult A Doctor If Sick</h4>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block" src="{{ url_for('static', filename='images/home.jpg') }}" alt="Stay Indoors">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>Stay Indoors</h4>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#dos-carousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#dos-carousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+        <ul>
+            <li>
+                <h3>Hand Wash</h3>
+                <p>Regular hand wash for 30 seconds will help you avoid germs or any kind of infection. Use soap or hand sanitizer for better results and do this every time you travel or touch anything. </p>
+            </li>
+
+            <li>
+                <h3>Cover Your Mouth & Nose</h3>
+                <p>Covering your mouth and nose while sneezing or when anyone next to coughs or sneezes can do you a lot better. Coronavirus usually spreads through cough and covering your nose and mouth will save you from this epidemic. </p>
+            </li>
+
+            <li>
+                <h3>Consult A Doctor If Sick</h3>
+                <p>If you are suffering from a common cold, cough, nausea, vomiting, shortness of breath and fatigue make it a point to consult a doctor at the earliest. Any of these symptoms could be a sign that you are suffering from the virus. </p>
+            </li>
+
+            <li>
+                <h3>Stay Indoors</h3>
+                <p>Avoid being in crowded places. An infected person can spread the virus instantly and crowded places is a good way to accomplish this. Make sure you wear full sleeves shirts with anti-pollution masks when you travel. Staying indoors is a rather safe option. </p>
+            </li>
+        </ul>
+
+        <h2>Don'ts</h2>
+
+        <div id="donts-carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#dos-carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#dos-carousel" data-slide-to="1"></li>
+              <li data-target="#dos-carousel" data-slide-to="2"></li>
+              <li data-target="#dos-carousel" data-slide-to="3"></li>
+              <li data-target="#dos-carousel" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block" src="{{ url_for('static', filename='images/ph.jpg') }}" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>Don’t Touch Your Face</h4>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block" src="{{ url_for('static', filename='images/india.jpg') }}" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>Avoid Close Contact With Anyone</h4>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block" src="{{ url_for('static', filename='images/home.jpg') }}" alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>Do Not Spit</h4>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block" src="{{ url_for('static', filename='images/home.jpg') }}" alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>Avoid Using Public Transport</h4>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#donts-carousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#donts-carousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+        <ul>
+            <li>
+                <h3>Don’t Touch Your Face</h3>
+                <p>Do not touch your face, nose and mouth often. This avoids the risks of developing the virus. Wash your hands with soap or hand sanitizer and this will do you good.</p>
+            </li>
+            <li>
+                <h3>Avoid Close Contact With Anyone</h3>
+                <p>Do not get close to anyone, especially touching or laughing closely. Also, use anti-pollution masks when out with friends or family. Avoid touching anyone and do not use the same utensils used by another. These simple non-touchy ways can do good until the outbreak comes to an end. </p>
+            </li>
+            <li>
+                <h3>Do Not Spit</h3>
+                <p>Spitting can increase the spread of the virus. Avoid spiting at in public and home. Also, avoid getting close to a sick person suffering from cold and cough. </p>
+            </li>
+            <li>
+                <h3>Avoid Using Public Transport</h3>
+                <p>Travelling by cab, flight, bus, train and tramp can get you infected. Use anti-pollution masks and carry a hand sanitizer with you everywhere. Consider travelling by your own vehicle and avoid public transport. In case you are feeling sick, it is advised that you avoid travelling and consult a doctor at the earliest. </p>
+            </li>
+        </ul>
     </div><br>
 
-    <footer class="footer fixed-bottom">
+    <footer class="footer">
 		<span><a href="{{ url_for('home') }}">Home</a> &nbsp; <a href="{{ url_for('india') }}">India Stats</a> &nbsp; <a href="{{ url_for('world') }}">World Stats</a> &nbsp; <a href="{{ url_for('donate') }}">Donate</a> &nbsp; <a href="{{ url_for('dos') }}">Do's and Don'ts</a> &nbsp; <a href="{{ url_for('credit') }}">Credits</a></span><br>
 		<span>Stay Home, Stay Safe</span><br>
 		<span>&copy; Akash Ambashankar</span><br>

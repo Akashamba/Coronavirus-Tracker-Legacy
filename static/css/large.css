@@ -155,7 +155,18 @@
 	  }
 	/*  */
 
-	/* footer */
+	/* Sticky Footer */
+	.container {
+		min-height: 100vh;
+		margin-bottom: -30vh;
+	}
+	
+	.container:after {
+		content: "";
+		display: block;
+		height: 30vh;
+	}
+
 	footer{
 		padding: 30px;
 		height: 30vh;
@@ -175,9 +186,34 @@
 	}
 	/*  */
 
-	/* Credits */
-	ul {
+	/* dos, Credits */
+	ul, ol {
 		font-size: 16px;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 30px;
+    	padding-bottom: 30px;
+	}
+
+	/* Carousel */
+	#dos-carousel, #donts-carousel {
+		margin:0 auto;
+		width: 45%;
+	}
+
+	#dos-carousel img, #donts-carousel img {
+		width: 100%;
+	}
+
+	h4 {
+		font-size: 20px;
+	}
+
+	h3 {
+		font-size: 28px;
+		text-decoration: none;
 	}
 	/*  */
 }

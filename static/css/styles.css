@@ -102,7 +102,7 @@ nav {
 header{
 	position: sticky;	
 	top: 0;
-	z-index: 10;
+	z-index: 20;
 }
 
 /* Hiding large screen nav */
@@ -220,7 +220,18 @@ th{
   }
 /**/
 
-/* Footer */
+/* Sticky Footer */
+.container {
+	min-height: 100vh;
+	margin-bottom: -25vh;
+}
+
+.container:after {
+	content: "";
+	display: block;
+	height: 25vh;
+}
+
 footer{
 	padding: 10px;
 	height: 25vh;
@@ -249,8 +260,46 @@ footer a{
 }
 /*  */
 
-/* Credits */
-ul {
+/* dos, Credits */
+ul, ol {
 	font-size: 35px;
 }
+
+p {
+	font-size: 35px;
+	line-height: 60px;
+    padding-bottom: 30px;
+}
+
+/* Carousel */
+#dos-carousel, #donts-carousel {
+	margin:0 auto;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#dos-carousel img, #donts-carousel img {
+	width: 100%;
+}
+
+h4 {
+	background-color: rgba(0,0,0,0.5);
+    display: inline;
+    font-weight: bold;
+    padding-left: 10px;
+	padding-right: 10px;
+	font-size: 40px;
+}
+
+h3 {
+	font-size: 45px;
+	text-decoration: underline;
+}
+
+li p {
+	margin-left: 20px;
+}
 /*  */
+
+/*  */
+
