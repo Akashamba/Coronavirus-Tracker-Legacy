@@ -240,16 +240,8 @@ footer a {
 	text-decoration: underline;
 }
 
-footer #last{
-	color: #000000;
-}
-
-#last a{
+footer a{
 	text-decoration: none;
-}
-
-#last a:hover {
-	color: #00FF00;
 }
 
 #github {

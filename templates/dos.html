@@ -40,9 +40,9 @@
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 					  <a class="dropdown-item" href="{{ url_for('donate') }}">Donate</a>
-					  <a class="dropdown-item" href="{{ url_for('dos') }}">Do's and Don'ts</a>
+					  <a class="active dropdown-item" href="{{ url_for('dos') }}">Do's and Don'ts</a>
 					  <div class="dropdown-divider"></div>
-					  <a class="active dropdown-item" href="{{ url_for('credit') }}">Credits</a>
+					  <a class="dropdown-item" href="{{ url_for('credit') }}">Credits</a>
 					</div>
 				  </li>
 			</ul>
@@ -56,44 +56,16 @@
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}" onclick="closeNav()"><i class="fas fa-dharmachakra" aria-hidden="true"></i> &nbsp; Indian Statistics</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}" onclick="closeNav()"><i class="fas fa-globe-americas" aria-hidden="true"></i> &nbsp; Global Statistics</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ url_for('donate') }}" onclick="closeNav()"><i class="fas fa-rupee-sign" aria-hidden="true"></i> &nbsp; &nbsp; Donate</a></li>
-			<li class="nav-item"><a class="nav-link" href="{{ url_for('dos') }}" onclick="closeNav()"><i class="fas fa-hands-wash"></i> &nbsp; Do's and Don'ts</a></li>
-			<li class="nav-item active"><a class="nav-link" href="{{ url_for('credit') }}" onclick="closeNav()"><i class="fab fa-creative-commons-by" aria-hidden="true"></i> &nbsp; Credits</a></li>
+			<li class="nav-item active"><a class="nav-link" href="{{ url_for('dos') }}" onclick="closeNav()"><i class="fas fa-hands-wash"></i> &nbsp; Do's and Don'ts</a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ url_for('credit') }}" onclick="closeNav()"><i class="fab fa-creative-commons-by" aria-hidden="true"></i> &nbsp; Credits</a></li>
 		</ul>
     </div>
 
     <div class="container">
-        <h2>Credits</h2>
-        <ul>
-			<li>Coronavirus Tracker Logo: <a target="_blank" href="https://www.instagram.com/breakinggrids.xo/">Siddharth Singh</a></li>
-			<br>
-			<li>Live Data:
-				<ul>
-					<li>Indian Data sourced from <a href="https://api.covid19india.org/">api.covid19india.org</a></li>
-					<li>Global Data sourced from <a href="https://api.covid19api.com/">api.covid19api.com</a></li>
-				</ul>
-			</li>
-			<br>
-			<li>Images:
-				<ul>
-					<li><a href="https://www.freevector.com/">FreeVector.com</a></li>
-					<li><a href="https://www.freepik.com/">freepik.com<a></li>
-					<li><a href="https://www.depositphotos.com/">depositphotos.com</a></li>
-				</ul>
-			</li>
-			<br>
-			<li>Graphs and Charts:
-				<ul>
-					<li><a href="https://ourworldindata.org/">ourworldindata.org</a></li>
-					<li><a href="https://flourish.studio">flourish.studio</a></li>
-				</ul>
-			</li>
-			<br>
-			<li>Do's and Don'ts sourced from: <a href="https://www.medlife.com/blog/covid-19-dos-and-donts/">medlife.com</a> </li>
-			<br>
-			<li>Icons: <a href="https://fontawesome.com/">Font Awesome</a></li>
-        </ul>
-    </div>
-	<footer>
+
+    </div><br>
+
+    <footer class="footer fixed-bottom">
 		<span><a href="{{ url_for('home') }}">Home</a> &nbsp; <a href="{{ url_for('india') }}">India Stats</a> &nbsp; <a href="{{ url_for('world') }}">World Stats</a> &nbsp; <a href="{{ url_for('donate') }}">Donate</a> &nbsp; <a href="{{ url_for('dos') }}">Do's and Don'ts</a> &nbsp; <a href="{{ url_for('credit') }}">Credits</a></span><br>
 		<span>Stay Home, Stay Safe</span><br>
 		<span>&copy; Akash Ambashankar</span><br>

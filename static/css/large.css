@@ -33,6 +33,11 @@
 	}
 
 	.dropdown-item:hover {
+		background-color: #EBEBED;
+	}
+
+	.dropdown .active{
+		color: #000000;
 		background-color: var(--main-bg-color);
 	}
 
@@ -161,9 +166,14 @@
 		line-height: 45px;
 	}
 
+	footer a:hover {
+		color: #00FF00;
+	}
+
 	#github {
 		font-size: 35px;
 	}
+	/*  */
 
 	/* Credits */
 	ul {
