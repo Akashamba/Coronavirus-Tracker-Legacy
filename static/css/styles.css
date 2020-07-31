@@ -265,6 +265,10 @@ ul, ol {
 	font-size: 35px;
 }
 
+#credit-list > li {
+	margin-bottom: 50px;
+}
+
 p {
 	font-size: 35px;
 	line-height: 60px;
@@ -301,5 +305,252 @@ li p {
 }
 /*  */
 
+/* Share Modal */
+#copy-data-2 {
+	visibility: hidden;
+}
+
 /*  */
 
+/* Styling for large devices */
+@media screen and (min-width: 992px){
+	body{
+		--main-bg-color: #00FF00;
+	}
+
+	h2 {
+		font-size: 40px;
+		width: 100%;
+		margin-left: 0px;  
+		margin-right: 0px;
+	}
+	/* Styling nav*/
+	nav{
+		height: 13vh;
+	}
+
+	.navbar-toggler-icon {
+		height: 1.5rem;
+		width: 1.5rem;
+	}
+
+	nav .navbar-nav{
+		display: flex;
+	}
+
+	#menu {
+		display: none;
+	}
+
+	.dropdown-menu {
+		left: -100%;
+	}
+
+	.dropdown-item:hover {
+		background-color: #EBEBED;
+	}
+
+	.dropdown .active{
+		color: #000000;
+		background-color: var(--main-bg-color);
+	}
+
+	nav .nav-item{
+		margin: 5px;
+		width: 100px;
+		border-radius: 20px;
+		text-align: center;
+	}
+
+	nav .nav-link {
+		font-size: 1rem;
+		white-space: nowrap;
+	}
+
+	nav .nav-item {
+		padding: 0px;
+	}
+
+	#logo {
+		width: 18vw;
+	}
+
+	nav .nav-item:hover{
+		background-color: #EBEBED;
+	}
+
+	nav .active{ /* Current Page */
+		background-color: #FFFFFF;
+	}
+	/**/
+
+	/* Styling images */
+	.top-pic{
+		width: 38%;
+	}
+
+	#modi{
+		float: left;
+		width: 38%;
+	}
+
+	#pmcares{
+		line-height: 38px;
+		display: block;
+	}
+
+	#donate-link, #pmcares{
+		font-size: 16px;
+	}
+	/*  */
+
+	/*Styling summary tabs*/
+	.summary{
+		transition-duration: 0.8s;
+		width: 18vw;
+		height: 8vh;
+		font-size: 16px;
+	}
+
+	.summary:hover{
+		background-color: var(--main-bg-color);	
+	}
+
+	.summary span{
+		font-size: 20px;
+	}	
+	/**/
+
+	/* Styling tables */
+	.table{
+		font-size: 16px;
+		width: 100%;
+		margin-left: 0px;  
+		margin-right: 0px;
+	}
+	/* Making table vertically scrollable */
+	.my-custom-scrollbar {
+		position: relative;
+		height: 90vh;
+		overflow: auto;
+		}
+	.table-wrapper-scroll-y {
+		display: block;
+		}
+
+	.table th, .table td{
+		padding: 12px;
+	}
+
+	#table-header, #table-header2{
+		font-weight: lighter;
+		font-size: 32px;
+	}
+	/**/
+
+	/* Stylings Charts and Graphs */
+	.graph {
+		width: 100%!important;
+		margin-left: 0px;  
+		margin-right: 0px;
+	}
+	/*  */
+
+	/* Scroll up Button */
+	#myBtn {
+		font-size: 18px;
+		padding-top: 10px;
+		width: 40px;
+		height: 40px;
+	}
+
+	#myBtn:hover {
+		background-color: var(--main-bg-color);
+	  }
+	/*  */
+
+	/* Sticky Footer */
+	.container {
+		min-height: 100vh;
+		margin-bottom: -30vh;
+	}
+	
+	.container:after {
+		content: "";
+		display: block;
+		height: 30vh;
+	}
+
+	footer{
+		padding: 30px;
+		height: 30vh;
+		font-size: 17px;
+	}
+
+	footer span{
+		line-height: 45px;
+	}
+
+	footer a:hover {
+		color: #00FF00;
+	}
+
+	#github {
+		font-size: 35px;
+	}
+	/*  */
+
+	/* dos, Credits */
+	ul, ol {
+		font-size: 16px;
+	}
+
+	#credit-list > li {
+		margin-bottom: 30px;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 30px;
+    	padding-bottom: 30px;
+	}
+
+	/* Carousel */
+	#dos-carousel, #donts-carousel {
+		margin:0 auto;
+		width: 45%;
+	}
+
+	#dos-carousel img, #donts-carousel img {
+		width: 100%;
+	}
+
+	h4 {
+		font-size: 20px;
+	}
+
+	h3 {
+		font-size: 28px;
+		text-decoration: none;
+	}
+	/*  */
+	/* Share Modal */
+	input {
+		width: 90%;
+	}
+
+	#copy-data {
+		border-radius: 10px;
+		background: #EBEBED;
+		padding-left: 11px;
+		display: inline-block;
+		width: 90%;
+	}
+
+	#copy {
+		background-color: #00FF00;
+		border-radius: 30px;
+	}
+	/*  */
+}
+/**/
