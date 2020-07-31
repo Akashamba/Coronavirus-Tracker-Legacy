@@ -42,6 +42,7 @@
 					  <a class="dropdown-item" href="{{ url_for('donate') }}">Donate</a>
 					  <a class="dropdown-item" href="{{ url_for('dos') }}">Do's and Don'ts</a>
 					  <div class="dropdown-divider"></div>
+					  <a type="button" class="btn dropdown-item" data-toggle="modal" data-target="#share">Share</i></a>
 					  <a class="dropdown-item" href="{{ url_for('credit') }}">Credits</a>
 					</div>
 				  </li>
@@ -56,8 +57,9 @@
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}" onclick="closeNav()"><i class="fas fa-dharmachakra" aria-hidden="true"></i> &nbsp; Indian Statistics</a></li>
 			<li class="nav-item active"><a class="nav-link" href="{{ url_for('world') }}" onclick="closeNav()"><i class="fas fa-globe-americas" aria-hidden="true"></i> &nbsp; Global Statistics</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('donate') }}" onclick="closeNav()"><i class="fas fa-rupee-sign" aria-hidden="true"></i> &nbsp; &nbsp; Donate</a></li>
-			<li class="nav-item"><a class="nav-link" href="{{ url_for('dos') }}" onclick="closeNav()"><i class="fas fa-hands-wash"></i> &nbsp; &nbsp; Do's and Don'ts</a></li>
-			<li class="nav-item"><a class="nav-link" href="{{ url_for('credit') }}" onclick="closeNav()"><i class="fab fa-creative-commons-by" aria-hidden="true"></i> &nbsp; &nbsp; Credits</a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ url_for('dos') }}" onclick="closeNav()"><i class="fas fa-hands-wash"></i> &nbsp; Do's and Don'ts</a></li>
+			<li class="nav-item"><a class="nav-link" type="button" data-toggle="modal" data-target="#share"><i class="fas fa-share-alt"></i> &nbsp; Share</i></a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ url_for('credit') }}" onclick="closeNav()"><i class="fab fa-creative-commons-by" aria-hidden="true"></i> &nbsp; Credits</a></li>
 		</ul>
 	</div>
 
@@ -96,9 +98,27 @@
 		<iframe class="graph" src="https://ourworldindata.org/grapher/daily-new-confirmed-cases-of-covid-19-positive-rate?country=MEX~OMN~BRA~ARG~ZAF~CRI~PAN~COL~BOL~BGD" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe><br>
 		<iframe class="graph" src="https://ourworldindata.org/grapher/positive-rate-daily-smoothed" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
 		<iframe class="graph" src="https://ourworldindata.org/grapher/full-list-cumulative-total-tests-per-thousand?time=2020-03-07..&country=IND~USA~RUS~ZAF~GBR~PAK" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe><br>
-	</div>
+	</div><br>
 
-	<br>
+	<div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="share" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Share</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<div class="modal-body">
+				<input readonly id="copy-data" value="https://coronavirus-live-tracker.herokuapp.com/">
+				<button id="copy" type="button" class="btn" data-dismiss="modal" onclick="myFunction()"><i class="far fa-clipboard"></i></button>
+			</div>
+			<div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+		</div>
+	</div>
 	
 	<footer>
 		<span><a href="{{ url_for('home') }}">Home</a> &nbsp; <a href="{{ url_for('india') }}">India Stats</a> &nbsp; <a href="{{ url_for('world') }}">World Stats</a> &nbsp; <a href="{{ url_for('donate') }}">Donate</a> &nbsp; <a href="{{ url_for('dos') }}">Do's and Don'ts</a> &nbsp; <a href="{{ url_for('credit') }}">Credits</a></span><br>
@@ -106,7 +126,6 @@
 		<span>&copy; Akash Ambashankar</span><br>
 		<a href="https://github.com/akashamba"><i id="github" class="fab fa-github"></i></a>
 	</footer>
-	<script src="{{ url_for('static', filename='js/navigation.js') }}"></script>
-	<script src="{{ url_for('static', filename='js/scrollup.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

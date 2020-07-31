@@ -43,6 +43,7 @@
 					  <a class="active dropdown-item" href="{{ url_for('donate') }}">Donate</a>
 					  <a class="dropdown-item" href="{{ url_for('dos') }}">Do's and Don'ts</a>
 					  <div class="dropdown-divider"></div>
+					  <a type="button" class="btn dropdown-item" data-toggle="modal" data-target="#share">Share</i></a>
 					  <a class="dropdown-item" href="{{ url_for('credit') }}">Credits</a>
 					</div>
 				  </li>
@@ -57,16 +58,38 @@
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}" onclick="closeNav()"><i class="fas fa-dharmachakra" aria-hidden="true"></i> &nbsp; Indian Statistics</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}" onclick="closeNav()"><i class="fas fa-globe-americas" aria-hidden="true"></i> &nbsp; Global Statistics</a></li>
 			<li class="nav-item active"><a class="nav-link" href="{{ url_for('donate') }}" onclick="closeNav()"><i class="fas fa-rupee-sign" aria-hidden="true"></i> &nbsp; &nbsp; Donate</a></li>
-			<li class="nav-item"><a class="nav-link" href="{{ url_for('dos') }}" onclick="closeNav()"><i class="fas fa-hands-wash"></i> &nbsp; &nbsp; Do's and Don'ts</a></li>
-			<li class="nav-item"><a class="nav-link" href="{{ url_for('credit') }}" onclick="closeNav()"><i class="fab fa-creative-commons-by" aria-hidden="true"></i> &nbsp; &nbsp; Credits</a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ url_for('dos') }}" onclick="closeNav()"><i class="fas fa-hands-wash"></i> &nbsp; Do's and Don'ts</a></li>
+			<li class="nav-item"><a class="nav-link" type="button" data-toggle="modal" data-target="#share"><i class="fas fa-share-alt"></i> &nbsp; Share</i></a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ url_for('credit') }}" onclick="closeNav()"><i class="fab fa-creative-commons-by" aria-hidden="true"></i> &nbsp; Credits</a></li>
 		</ul>
 	</div>
 	
 	<div class="container"><br>
-		<h2><img id="modi" src="{{ url_for('static', filename='images/modi.jpg') }}">Donate</h2>
+		<button onclick="topFunction()" id="myBtn" title="Go to top">&#8963;</button>
+		<h2><img id="modi" src="{{ url_for('static', filename='images/modi.jpg') }}" alt="Indian Prime Minister Narendra Modi">Donate</h2>
 		<q id="pmcares">PM-CARES fund is aimed at strengthening the fight against COVID-19. It will further availability of quality treatment and encourage research on ways to beat Coronavirus. I urge people from all walks of life to contribute to PM-CARES. Together, let's solve challenges of the present and protect the future.</q>
-		<a href="https://www.pmcares.gov.in/en/#" target="_blank"id="donate-link">Donate to PM CARES</a>
+		<a href="https://www.pmcares.gov.in/en/#" target="_blank" id="donate-link">Donate to PM CARES</a>
 	</div><br>
+
+	<div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="share" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Share</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<div class="modal-body">
+				<input readonly id="copy-data" value="https://coronavirus-live-tracker.herokuapp.com/">
+				<button id="copy" type="button" class="btn" data-dismiss="modal" onclick="myFunction()"><i class="far fa-clipboard"></i></button>
+			</div>
+			<div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+		</div>
+	</div>
 
 	<footer>
 		<span><a href="{{ url_for('home') }}">Home</a> &nbsp; <a href="{{ url_for('india') }}">India Stats</a> &nbsp; <a href="{{ url_for('world') }}">World Stats</a> &nbsp; <a href="{{ url_for('donate') }}">Donate</a> &nbsp; <a href="{{ url_for('dos') }}">Do's and Don'ts</a> &nbsp; <a href="{{ url_for('credit') }}">Credits</a></span><br>
@@ -75,5 +98,6 @@
 		<a href="https://github.com/akashamba"><i id="github" class="fab fa-github"></i></a>
 	</footer>
 	<script src="{{ url_for('static', filename='js/navigation.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
