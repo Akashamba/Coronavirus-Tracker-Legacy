@@ -41,3 +41,25 @@ function closeNav() {
   document.getElementById("mySidenav").style.boxShadow = "0 .5rem 1rem .5rem rgba(0,0,0,0)";
   document.getElementsByTagName("body")[0].onclick="";
 }
+
+const shareButton = document.querySelector('.share-button');
+const shareDialog = document.querySelector('.share-dialog');
+const closeButton = document.querySelector('.close-button');
+
+shareButton.addEventListener('click', event => {
+  if (navigator.share) { 
+   navigator.share({
+      title: 'Coronavirus Live Tracker',
+      url: 'https://coronavirus-live-tracker.herokuapp.com/'
+    }).then(() => {
+      console.log('Thanks for sharing!');
+    })
+    .catch(console.error);
+    } else {
+        shareDialog.classList.add('is-open');
+    }
+});
+
+closeButton.addEventListener('click', event => {
+  shareDialog.classList.remove('is-open');
+});
