@@ -307,10 +307,7 @@ li p {
 
 /* Share Modal */
 #copy-data-2 {
-	width: 100%;
-	color: #EBEBED;
-	background-color: #EBEBED;
-	height: 0.1px;
+	display: none;
 }
 
 /*  */
