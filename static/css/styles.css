@@ -307,7 +307,10 @@ li p {
 
 /* Share Modal */
 #copy-data-2 {
-	visibility: hidden;
+	width: 100%;
+	color: #EBEBED;
+	background-color: #EBEBED;
+	height: 0.1px;
 }
 
 /*  */
