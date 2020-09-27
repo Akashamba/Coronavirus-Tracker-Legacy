@@ -20,6 +20,8 @@
 
 	<script src="https://kit.fontawesome.com/ccec0b4920.js" crossorigin="anonymous"></script>
 	<script data-ad-client="ca-pub-4451228373649675" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+	<!-- Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174248035-1"></script>
 	<script>
   		window.dataLayer = window.dataLayer || [];
@@ -40,7 +42,7 @@
 			</button>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}">India Stats</a></li>
+				<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}">Indian Stats</a></li>
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}">Global Stats</a></li>
                 <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -50,7 +52,6 @@
 					  <a class="dropdown-item" href="{{ url_for('donate') }}">Donate</a>
 					  <a class="dropdown-item" href="{{ url_for('dos') }}">Do's and Don'ts</a>
 					  <div class="dropdown-divider"></div>
-					  <a href="#" class="btn dropdown-item" data-toggle="modal" data-target="#share">Share</a> 
 					  <a class="active dropdown-item" href="{{ url_for('credit') }}">Credits</a>
 					</div>
 				  </li>
@@ -129,9 +130,9 @@
 	</div>
 
 	<footer>
-		<span><a href="{{ url_for('home') }}">Home</a> &nbsp; <a href="{{ url_for('india') }}">India Stats</a> &nbsp; <a href="{{ url_for('world') }}">World Stats</a> &nbsp; <a href="{{ url_for('donate') }}">Donate</a> &nbsp; <a href="{{ url_for('dos') }}">Do's and Don'ts</a> &nbsp; <a href="{{ url_for('credit') }}">Credits</a></span><br>
+		<span><a href="{{ url_for('home') }}">Home</a> &nbsp; <a href="{{ url_for('india') }}">Indian Stats</a> &nbsp; <a href="{{ url_for('world') }}">World Stats</a> &nbsp; <a href="{{ url_for('donate') }}">Donate</a> &nbsp; <a href="{{ url_for('dos') }}">Do's and Don'ts</a> &nbsp; <a href="{{ url_for('credit') }}">Credits</a></span><br>
 		<span>Stay Home, Stay Safe</span><br>
-		<span>&copy; Akash Ambashankar</span><br>
+		<span>&copy; <a href="https://akashamba-portfolio.netlify.app/" target="none" id="portfolio">Akash Ambashankar</a></span><br>
 		<a href="https://github.com/akashamba"><i id="github" class="fab fa-github"></i></a>
 	</footer>
 	<script src="{{ url_for('static', filename='js/script.js') }}"></script>

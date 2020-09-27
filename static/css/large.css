@@ -91,15 +91,15 @@
 	/*  */
 
 	/*Styling summary tabs*/
+	.col-md-12 {
+		margin: 10px 0 10px 0;
+	}
+
 	.summary{
 		transition-duration: 0.8s;
 		width: 18vw;
-		height: 8vh;
+		height: 13vh;
 		font-size: 16px;
-	}
-
-	.summary:hover{
-		background-color: var(--main-bg-color);	
 	}
 
 	.summary span{
@@ -113,6 +113,13 @@
 		width: 100%;
 		margin-left: 0px;  
 		margin-right: 0px;
+	}
+
+	.update {
+		margin-bottom: 40px;
+		display: block;
+		margin-left: 0px;
+		font-size: 1rem;
 	}
 	/* Making table vertically scrollable */
 	.my-custom-scrollbar {
@@ -129,9 +136,17 @@
 	}
 
 	#table-header, #table-header2{
-		font-weight: lighter;
+		font-weight: 400;
 		font-size: 32px;
 	}
+
+	.summary.changes {
+	    margin-top: 0px;
+	}
+
+	.changes {
+        font-size: 13px!important;
+    }
 	/**/
 
 	/* Stylings Charts and Graphs */
@@ -139,6 +154,7 @@
 		width: 100%!important;
 		margin-left: 0px;  
 		margin-right: 0px;
+		margin-bottom: 50px;
 	}
 	/*  */
 

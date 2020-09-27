@@ -20,6 +20,8 @@
 
 	<script src="https://kit.fontawesome.com/ccec0b4920.js" crossorigin="anonymous"></script>
 	<script data-ad-client="ca-pub-4451228373649675" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+	<!-- Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174248035-1"></script>
 	<script>
   		window.dataLayer = window.dataLayer || [];
@@ -39,7 +41,7 @@
 			</button>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}">India Stats</a></li>
+				<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}">Indian Stats</a></li>
 				<li class="nav-item active"><a class="nav-link" href="{{ url_for('world') }}">World Stats</a></li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,7 +51,6 @@
 					  <a class="dropdown-item" href="{{ url_for('donate') }}">Donate</a>
 					  <a class="dropdown-item" href="{{ url_for('dos') }}">Do's and Don'ts</a>
 					  <div class="dropdown-divider"></div>
-					  <a href="#" class="btn dropdown-item" data-toggle="modal" data-target="#share">Share</a>
 					  <a class="dropdown-item" href="{{ url_for('credit') }}">Credits</a>
 					</div>
 				  </li>
@@ -80,8 +81,8 @@
 		<img class="top-pic" src="{{ url_for('static', filename='images/world.jpg') }}" alt="dirty-and-clean-hand">
 		<div class="row">
 			<div class="col-md-12">
-			{% for key, value in result[0].items() %}
-				<div class="summary"> <span>{{ value }}</span> <br> <b>{{ key }}</b> </div>
+			{% for key, value in world[0].items() %}
+				<div class="summary"><b>{{ key }}</b> <br> <span>{{ value[0] }}</span><span class="changes">Today: {{ value[1] }}</span></div>
 			{% endfor %}	
 			</div>
 		</div>
@@ -91,16 +92,20 @@
 			<table class="table table-striped table-hover table-responsive-lg custom">
 				<tr><th colspan="5" id="table-header">Global Data &nbsp;<span class="swipe d-lg-none">Swipe &rarr;</span></th></tr>
 				<tr style="position: sticky;"><th>#</th><th>Country</th><th>Confirmed</th><th>Recovered</th><th>Deaths</th></tr>
-				{% for i in range(1,result|length) %}
+				{% for i in range(1,world|length-1) %}
 					<tr>
-						{% for key, value in result[i].items() %}
-							<td> {{ value }} </td>
+						{% for key, value in world[i].items() %}
+							{% if value is iterable and value|length == 2 %}
+								<td> {{ value[0] }} <span class="changes">Today: {{ value[1] }}</span></td>
+							{% else %}
+				        		<td> {{ value }} </td>
+							{% endif %}
 						{% endfor %}
 					</tr>
 				{% endfor %}
 				<tr><th>#</th><th>Country</th><th>Confirmed</th><th>Recovered</th><th>Deaths</th></tr>
 			</table>
-		</div><br>
+		</div><span class="update">Last Updated: {{ world[world|length-1] }}</span><br>
 
 		<h2>Charts and Graphs</h2>
 		<iframe class="graph" src="https://ourworldindata.org/grapher/daily-new-confirmed-cases-of-covid-19-positive-rate?country=MEX~OMN~BRA~ARG~ZAF~CRI~PAN~COL~BOL~BGD" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe><br>
@@ -129,9 +134,9 @@
 	</div>
 	
 	<footer>
-		<span><a href="{{ url_for('home') }}">Home</a> &nbsp; <a href="{{ url_for('india') }}">India Stats</a> &nbsp; <a href="{{ url_for('world') }}">World Stats</a> &nbsp; <a href="{{ url_for('donate') }}">Donate</a> &nbsp; <a href="{{ url_for('dos') }}">Do's and Don'ts</a> &nbsp; <a href="{{ url_for('credit') }}">Credits</a></span><br>
+		<span><a href="{{ url_for('home') }}">Home</a> &nbsp; <a href="{{ url_for('india') }}">Indian Stats</a> &nbsp; <a href="{{ url_for('world') }}">World Stats</a> &nbsp; <a href="{{ url_for('donate') }}">Donate</a> &nbsp; <a href="{{ url_for('dos') }}">Do's and Don'ts</a> &nbsp; <a href="{{ url_for('credit') }}">Credits</a></span><br>
 		<span>Stay Home, Stay Safe</span><br>
-		<span>&copy; Akash Ambashankar</span><br>
+		<span>&copy; <a href="https://akashamba-portfolio.netlify.app/" target="none" id="portfolio">Akash Ambashankar</a></span><br>
 		<a href="https://github.com/akashamba"><i id="github" class="fab fa-github"></i></a>
 	</footer>
 	<script src="{{ url_for('static', filename='js/script.js') }}"></script>

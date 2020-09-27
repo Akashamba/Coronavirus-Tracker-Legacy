@@ -79,46 +79,33 @@
 
 		<button onclick="topFunction()" id="myBtn" title="Go to top">&#8963;</button>
 
-		<br><h2>Indian Statistics</h2>
+		<br><h2>{{ state_name }} Statistics</h2>
 
 		<img class="top-pic" src="{{ url_for('static', filename='images/india.jpg') }}" alt="man-wearing-mask">
-		<div class="row">
-			<div class="col-md-12">
-			{% for key, value in india[0].items() %}
-				<div class="summary"><b>{{ key }}</b> <br> <span>{{ value[0] }}</span><span class="changes">Today: {{ value[1] }}</span></div>
-			{% endfor %}	
-			</div>
-		</div>
-
+		
 		<br>
-		<a href="/state/Karnataka">test</a>
+
 		<div class="table-wrapper-scroll-y my-custom-scrollbar">
 			<table class="table table-striped table-hover table-responsive-lg custom">
-				<tr><th colspan="6" id="table-header">Indian Statewise Data &nbsp;<span class="swipe d-lg-none">Swipe &rarr;</span></th></tr>
-				<tr><th>#</th><th>State</th><th>Confirmed</th><th>Active</th><th>Recovered</th><th>Deaths</th></tr>
-				{% for i in range(1,india|length-1) %}
-					<a href="https://google.com">
-						<tr>
-							{% for key, value in india[i].items() %}
-								{% if value is iterable and value|length == 2 %}
-									<td> {{ value[0] }} <span class="changes">Today: {{ value[1] }}</span></td>
-								{% else %}
-					        		<td> {{ value }} </td>
-								{% endif %}
-							{% endfor %}
-						</tr>
-					</a>
+				<tr><th colspan="6" id="table-header">{{ state_name }} Districtwise Data &nbsp;<span class="swipe d-lg-none">Swipe &rarr;</span></th></tr>
+				<tr><th>#</th><th>District</th><th>Confirmed</th><th>Active</th><th>Recovered</th><th>Deaths</th></tr>
+				{% for i in range(1,state|length-1) %}
+					<tr>
+						{% for key, value in state[i].items() %}
+							{% if value is iterable and value|length == 2 %}
+								<td> {{ value[0] }} <span class="changes">Today: {{ value[1] }}</span></td>
+							{% else %}
+				        		<td> {{ value }} </td>
+							{% endif %}
+						{% endfor %}
+					</tr>
 				{% endfor %}
-				<tr><th>#</th><th>State</th><th>Confirmed</th><th>Active</th><th>Recovered</th><th>Deaths</th></tr>
+				<tr><th>#</th><th>District</th><th>Confirmed</th><th>Active</th><th>Recovered</th><th>Deaths</th></tr>
 			</table>
-		</div><span class="update">Last Updated: {{ india[india|length-1] }}</span><br>
-
-	<h2>Charts and Graphs</h2>
-	<iframe class="graph" src="https://ourworldindata.org/coronavirus-data-explorer?yScale=log&zoomToSelection=true&country=~IND&deathsMetric=true&totalFreq=true&aligned=true&hideControls=true&smoothing=0&pickerMetric=location&pickerSort=asc" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe><br>
-	<div class="graph flourish-embed flourish-map" data-src="story/225979"><script src="https://public.flourish.studio/resources/embed.js"></script></div><br>
-	<iframe class="graph" src="https://ourworldindata.org/coronavirus-data-explorer?zoomToSelection=true&time=2020-03-14..&country=USA~BRA~GBR~IRN~RUS~ZAF~IND&cfrMetric=true&totalFreq=true&aligned=true&hideControls=true&smoothing=0&pickerMetric=location&pickerSort=asc" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
-	</div><br>
-
+		</div>
+	</div>
+	<br>
+		
 	<div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="share" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 		<div class="modal-content">
@@ -138,6 +125,7 @@
 		</div>
 		</div>
 	</div>
+	<br>
 
 	<footer>
 		<span><a href="{{ url_for('home') }}">Home</a> &nbsp; <a href="{{ url_for('india') }}">Indian Stats</a> &nbsp; <a href="{{ url_for('world') }}">World Stats</a> &nbsp; <a href="{{ url_for('donate') }}">Donate</a> &nbsp; <a href="{{ url_for('dos') }}">Do's and Don'ts</a> &nbsp; <a href="{{ url_for('credit') }}">Credits</a></span><br>

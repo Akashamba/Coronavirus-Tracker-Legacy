@@ -18,15 +18,17 @@
 
 	<title>Covid-19 Tracker</title>
 
-	<script src="https://kit.fontawesome.com/ccec0b4920.js" crossorigin="anonymous"></script>
-	<script data-ad-client="ca-pub-4451228373649675" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174248035-1"></script>
-	<script>
-  		window.dataLayer = window.dataLayer || [];
-  		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'UA-174248035-1');
-	</script>
+    <script src="https://kit.fontawesome.com/ccec0b4920.js" crossorigin="anonymous"></script>
+    <script data-ad-client="ca-pub-4451228373649675" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174248035-1"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-174248035-1');
+  </script>
 </head>
 <body>
 	
@@ -40,7 +42,7 @@
 			</button>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}">India Stats</a></li>
+				<li class="nav-item"><a class="nav-link" href="{{ url_for('india') }}">Indian Stats</a></li>
 				<li class="nav-item"><a class="nav-link" href="{{ url_for('world') }}">Global Stats</a></li>
         <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -50,7 +52,6 @@
 					  <a class="dropdown-item" href="{{ url_for('donate') }}">Donate</a>
 					  <a class="active dropdown-item" href="{{ url_for('dos') }}">Do's and Don'ts</a>
             <div class="dropdown-divider"></div>
-            <a href="#" class="btn dropdown-item" data-toggle="modal" data-target="#share">Share</a>
 					  <a class="dropdown-item" href="{{ url_for('credit') }}">Credits</a>
 					</div>
 				  </li>
@@ -89,19 +90,19 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block" src="{{ url_for('static', filename='images/ph.jpg') }}" alt="Wash Hands">
+                <img class="d-block" src="{{ url_for('static', filename='images/whands.png') }}" alt="Wash Hands">
                 <div class="carousel-caption d-none d-md-block">
-                <h4>Hand Wash</h4>
+                <h4>Wash Hands</h4>
                 </div>
               </div>
               <div class="carousel-item">
-                <img class="d-block" src="{{ url_for('static', filename='images/india.jpg') }}" alt="Cover Your Mouth & Nose">
+                <img class="d-block" src="{{ url_for('static', filename='images/mask2.png') }}" alt="Cover Your Mouth & Nose">
                 <div class="carousel-caption d-none d-md-block">
                     <h4>Cover Your Mouth & Nose</h4>
                 </div>
               </div>
               <div class="carousel-item">
-                <img class="d-block" src="{{ url_for('static', filename='images/home.jpg') }}" alt="Consult A Doctor If Sick">
+                <img class="d-block" src="{{ url_for('static', filename='images/india2.jpg') }}" alt="Consult A Doctor If Sick">
                 <div class="carousel-caption d-none d-md-block">
                     <h4>Consult A Doctor If Sick</h4>
                 </div>
@@ -125,7 +126,7 @@
 
         <ul>
             <li>
-                <h3>Hand Wash</h3>
+                <h3>Wash Hands</h3>
                 <p>Regular hand wash for 30 seconds will help you avoid germs or any kind of infection. Use soap or hand sanitizer for better results and do this every time you travel or touch anything. </p>
             </li>
 
@@ -232,9 +233,9 @@
     </div>
 
     <footer class="footer">
-		<span><a href="{{ url_for('home') }}">Home</a> &nbsp; <a href="{{ url_for('india') }}">India Stats</a> &nbsp; <a href="{{ url_for('world') }}">World Stats</a> &nbsp; <a href="{{ url_for('donate') }}">Donate</a> &nbsp; <a href="{{ url_for('dos') }}">Do's and Don'ts</a> &nbsp; <a href="{{ url_for('credit') }}">Credits</a></span><br>
+		<span><a href="{{ url_for('home') }}">Home</a> &nbsp; <a href="{{ url_for('india') }}">Indian Stats</a> &nbsp; <a href="{{ url_for('world') }}">World Stats</a> &nbsp; <a href="{{ url_for('donate') }}">Donate</a> &nbsp; <a href="{{ url_for('dos') }}">Do's and Don'ts</a> &nbsp; <a href="{{ url_for('credit') }}">Credits</a></span><br>
 		<span>Stay Home, Stay Safe</span><br>
-		<span>&copy; Akash Ambashankar</span><br>
+		<span>&copy; <a href="https://akashamba-portfolio.netlify.app/" target="none" id="portfolio">Akash Ambashankar</a></span><br>
 		<a href="https://github.com/akashamba"><i id="github" class="fab fa-github"></i></a>
 	</footer>
 	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
