@@ -35,7 +35,7 @@ def get_india_data():
                    "Deaths": [int(total["statewise"][0]["deaths"]), int(total["statewise"][0]["deaths"])]}]
     for i in range(1, len(total["statewise"])):
         india_data.append({"id": i + 1, "State": total["statewise"][i]["state"],
-                           "Confirmed": [int(total["statewise"][0]["confirmed"]),
+                           "Confirmed": [int(total["statewise"][i]["confirmed"]),
                                          int(total["statewise"][i]["deltaconfirmed"])],
                            "Active": [int(total["statewise"][i]["active"]), int(total["statewise"][i]["deltaconfirmed"])],
                            "Recovered": [int(total["statewise"][i]["recovered"]),
