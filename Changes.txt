@@ -1,0 +1,29 @@
+
+Donate: better picture
+district level stats
+search bar
+DOs and DONTs pics
+add medium view and fix height issues
+dark mode
+
+Share Button on PC
+Change India Stats to Indian Stats
+link to portfolio page
+add daily changes
+break between sections
+Table Headers Bold
+Denote "more" as active on navbar
+
+
+COMPLETED
+Denote "more" as active on navbar
+Table headers bold
+daily changes
+added pics sent so far
+break between sections
+Change India Stats to Indian Stats
+link to portfolio page
+Share Button on PC
+
+
+
